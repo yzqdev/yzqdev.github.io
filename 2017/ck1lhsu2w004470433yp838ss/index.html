@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="贪心算法总结贪心算法贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。">
+<meta name="keywords" content="电脑,编程,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心算法">
+<meta property="og:url" content="https://yzqdev.github.io/2017/ck1lhsu2w004470433yp838ss/index.html">
+<meta property="og:site_name" content="七月飞雪">
+<meta property="og:description" content="贪心算法总结贪心算法贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-f0413127c4754248.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-78c7905f18412c41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/507">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-bd56564c206c2060.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/358">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-86b31fdeff88b7dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-7f69c2dc3fa512e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/489">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-fdab36968693b0f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-32e164789d15c188.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-a014db737d1ae27d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/418">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-9c97005356ed25db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1531909-69ea5abafe7cfc26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/560">
+<meta property="og:updated_time" content="2019-04-06T05:27:56.423Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="贪心算法">
+<meta name="twitter:description" content="贪心算法总结贪心算法贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1531909-f0413127c4754248.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459">
+
+
+
+  <link rel="alternate" href="http://www.zhihu.com/rss" title="七月飞雪" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://yzqdev.github.io/2017/ck1lhsu2w004470433yp838ss/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>贪心算法 | 七月飞雪</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">七月飞雪</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">YZQ BLOG</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">33</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/yzqdev/yzqdev.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yzqdev.github.io/2017/ck1lhsu2w004470433yp838ss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="静听、唯美殇">
+      <meta itemprop="description" content="for love">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="七月飞雪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">贪心算法
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-29 09:17:00" itemprop="dateCreated datePublished" datetime="2017-12-29T09:17:00+08:00">2017-12-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-06 13:27:56" itemprop="dateModified" datetime="2019-04-06T13:27:56+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/ck1lhsu2w004470433yp838ss/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/ck1lhsu2w004470433yp838ss/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2017/ck1lhsu2w004470433yp838ss/" class="leancloud_visitors" data-flag-title="贪心算法">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">36k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1:05</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="贪心算法总结"><a href="#贪心算法总结" class="headerlink" title="贪心算法总结"></a>贪心算法总结</h1><h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><p>贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。</p>
+<a id="more"></a>
+<h1 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h1><ol>
+<li>建立数学模型来描述问题；</li>
+<li>把求解的问题分成若干个子问题；</li>
+<li>对每一子问题求解，得到子问题的局部最优解；</li>
+<li>把子问题的解局部最优解合成原来解问题的一个解。</li>
+</ol>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><ol>
+<li>从问题的某个初始解出发。</li>
+<li>采用循环语句，当可以向求解目标前进一步时，就根据局部最优策略，得到一个部分解，缩小问题的范围或规模。</li>
+<li>将所有部分解综合起来，得到问题的最终解。</li>
+</ol>
+<h1 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h1><h2 id="实例-1-背包问题"><a href="#实例-1-背包问题" class="headerlink" title="实例 1 背包问题"></a>实例 1 背包问题</h2><ul>
+<li><p>问题描述有一个背包，背包容量是 M=150。有 7 个物品，物品可以分割成任意大小。要求尽可能让装入背包中的物品总价值最大，但不能超过总容量。</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-f0413127c4754248.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459" alt="img"></p>
+</li>
+<li><p>问题分析</p>
+<p>​</p>
+<p>1.目标函数： ∑pi 最大，使得装入背包中的所有物品 pi 的价值加起来最大。</p>
+<p>​</p>
+<p>2.约束条件：装入的物品总重量不超过背包容量：∑wi&lt;=M( M=150)</p>
+<p>​</p>
+<p>3.贪心策略：</p>
+<ul>
+<li>选择价值最大的物品</li>
+<li>选择价值最大的物品</li>
+<li>选择单位重量价值最大的物品有三个物品 A,B,C，其重量分别为{30,10,20}，价值分别为{60,30,80}，背包的容量为 50，分别应用三种贪心策略装入背包的物品和获得的价值如下图所示：</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-78c7905f18412c41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/507" alt="img"></p>
+<p>三种策略</p>
+<ul>
+<li>算法设计：</li>
+</ul>
+<ol>
+<li>计算出每个物品单位重量的价值</li>
+<li>按单位价值从大到小将物品排序</li>
+<li>根据背包当前所剩容量选取物品</li>
+<li>如果背包的容量大于当前物品的重量，那么就将当前物品装进去。否则，那么就将当前物品舍去，然后跳出循环结束。</li>
+</ol>
+<ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef struct&#123;</span><br><span class="line">    int w;</span><br><span class="line">    int v;</span><br><span class="line">    double avg;</span><br><span class="line">&#125;P;</span><br><span class="line">bool cmp(P a,P b)&#123;</span><br><span class="line">    return a.avg&gt;b.avg;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    P *p;</span><br><span class="line">    int n,i,m;//n 物品个数 m背包容量</span><br><span class="line">    while(cin&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        p=new P[n];</span><br><span class="line">        for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">            cin&gt;&gt;p[i].w&gt;&gt;p[i].v;</span><br><span class="line">            p[i].avg=p[i].v/p[i].w*1.0;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(p,p+n,cmp);</span><br><span class="line">        int maxvalue=0;</span><br><span class="line">        for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">            if(p[i].w&lt;=m)&#123;</span><br><span class="line">                m-=p[i].w;</span><br><span class="line">                maxvalue+=p[i].v;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;maxvalue&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>运行结果</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-bd56564c206c2060.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/358" alt="img"></p>
+</li>
+</ul>
+<h2 id="实例-2-活动安排问题"><a href="#实例-2-活动安排问题" class="headerlink" title="实例 2 活动安排问题"></a>实例 2 活动安排问题</h2><ul>
+<li>问题描述：设有 n 个活动的集合 E={1,2,…,n}，其中每个活动都要求使用同一资源，如演讲会场等，而在同一时间内只有一个活动能使用这一资源。每个活动 i 都有一个要求使用该资源的起始时间 si 和一个结束时间 fi,且 si &lt;fi 。要求设计程序，使得安排的活动最多。</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-86b31fdeff88b7dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="img"></p>
+<p>(ps:活动结束时间按从小到大排序)</p>
+<ul>
+<li>问题分析：活动安排问题要求安排一系列争用某一公共资源的活动。用贪心算法可提供一个简单、漂亮的方法，使尽可能多的活动能兼容的使用公共资源。设有 n 个活动的集合｛0，1，2，…，n-1｝，其中每个活动都要求使用同一资源，如会场等，而在同一时间内只有一个活动能使用这一资源。每个活动 i 都有一个要求使用该资源的起始时间 starti 和一个结束时间 endi，且 starti&lt;endi。如选择了活动 i，则它在半开时间区间[starti,endi）内占用资源。若区间[starti,endi)与区间[startj,endj)不相交，称活动 i 与活动 j 是相容的。也就是说，当 startj≥endi 或 starti≥endj 时，活动 i 与活动 j 相容。活动安排问题就是在所给的活动集合中选出最多的不相容活动。活动安排问题就是要在所给的活动集合中选出最大的相容活动子集合，是可以用贪心算法有效求解的很好例子。该问题要求高效地安排一系列争用某一公共资源的活动。贪心算法提供了一个简单、漂亮的方法使得尽可能多的活动能兼容地使用公共资源。</li>
+<li>算法设计：若被检查的活动 i 的开始时间 starti 小于最近选择的活动 j 的结束时间 endj，则不选择活动 i，否则选择活动 i 加入集合中。运用该算法解决活动安排问题的效率极高。当输入的活动已按结束时间的非减序排列，算法只需 O(n)的时间安排 n 个活动，使最多的活动能相容地使用公共资源。如果所给出的活动未按非减序排列，可以用 O(nlogn)的时间重排。</li>
+<li>代码实现：代码 1</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct actime&#123;</span><br><span class="line">    int start,finish;</span><br><span class="line">&#125;act[1002];</span><br><span class="line">bool cmp(actime a,actime b)&#123;</span><br><span class="line">    return a.finish&lt;b.finish;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int i,n,t,total;</span><br><span class="line">    while(cin&gt;&gt;n)&#123;//活动的个数</span><br><span class="line">        for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">            cin&gt;&gt;act[i].start&gt;&gt;act[i].finish;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(act,act+n,cmp);//按活动结束时间从小到大排序</span><br><span class="line">        t=-1;</span><br><span class="line">        total=0;</span><br><span class="line">        for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">            if(t&lt;=act[i].start)&#123;</span><br><span class="line">                total++;</span><br><span class="line">                t=act[i].finish;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;total&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>运行结果 1</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-7f69c2dc3fa512e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/489" alt="img"></p>
+</li>
+</ul>
+<p>代码 2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">template&lt;class Type&gt;</span><br><span class="line">void GreedySelector(int n, Type s[], Type f[], bool A[]);</span><br><span class="line"></span><br><span class="line">const int N = 11;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //下标从1开始,存储活动开始时间</span><br><span class="line">    int s[] = &#123;0,1,3,0,5,3,5,6,8,8,2,12&#125;;</span><br><span class="line"></span><br><span class="line">    //下标从1开始,存储活动结束时间</span><br><span class="line">    int f[] = &#123;0,4,5,6,7,8,9,10,11,12,13,14&#125;;</span><br><span class="line"></span><br><span class="line">    bool A[N+1];</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;&quot;各活动的开始时间,结束时间分别为：&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=N;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;&quot;[&quot;&lt;&lt;i&lt;&lt;&quot;]:&quot;&lt;&lt;&quot;(&quot;&lt;&lt;s[i]&lt;&lt;&quot;,&quot;&lt;&lt;f[i]&lt;&lt;&quot;)&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    GreedySelector(N,s,f,A);</span><br><span class="line">    cout&lt;&lt;&quot;最大相容活动子集为：&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=N;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(A[i])&#123;</span><br><span class="line">            cout&lt;&lt;&quot;[&quot;&lt;&lt;i&lt;&lt;&quot;]:&quot;&lt;&lt;&quot;(&quot;&lt;&lt;s[i]&lt;&lt;&quot;,&quot;&lt;&lt;f[i]&lt;&lt;&quot;)&quot;&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">template&lt;class Type&gt;</span><br><span class="line">void GreedySelector(int n, Type s[], Type f[], bool A[])</span><br><span class="line">&#123;</span><br><span class="line">    A[1]=true;</span><br><span class="line">    int j=1;//记录最近一次加入A中的活动</span><br><span class="line"></span><br><span class="line">    for (int i=2;i&lt;=n;i++)//依次检查活动i是否与当前已选择的活动相容</span><br><span class="line">    &#123;</span><br><span class="line">        if (s[i]&gt;=f[j])</span><br><span class="line">        &#123;</span><br><span class="line">            A[i]=true;</span><br><span class="line">            j=i;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            A[i]=false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行结果 2</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-fdab36968693b0f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="img"></p>
+<h2 id="实例-3-最小生成树（克鲁斯卡尔算法）"><a href="#实例-3-最小生成树（克鲁斯卡尔算法）" class="headerlink" title="实例 3 最小生成树（克鲁斯卡尔算法）"></a>实例 3 最小生成树（克鲁斯卡尔算法）</h2><ul>
+<li>问题描述</li>
+</ul>
+<blockquote>
+<p>求一个连通无向图的最小生成树的代价（图边权值为正整数）。</p>
+</blockquote>
+<p>输入</p>
+<blockquote>
+<p>第一行是一个整数 N（1&lt;=N&lt;=20），表示有多少个图需要计算。以下有 N 个图，第 i 图的第一行是一个整数 M（1&lt;=M&lt;=50），表示图的顶点数，第 i 图的第 2 行至 1+M 行为一个 M*M 的二维矩阵，其元素 ai,j 表示图的 i 顶点和 j 顶点的连接情况，如果 ai,j=0，表示 i 顶点和 j 顶点不相连；如果 ai,j&gt;0，表示 i 顶点和 j 顶点的连接权值。</p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>每个用例，用一行输出对应图的最小生成树的代价。</p>
+</blockquote>
+<p>样例输入</p>
+<blockquote>
+<p>1<br>6<br>0 6 1 5 0 0<br>6 0 5 0 3 0<br>1 5 0 5 6 4<br>5 0 5 0 0 2<br>0 3 6 0 0 6<br>0 0 4 2 6 0</p>
+</blockquote>
+<p>样例输出</p>
+<blockquote>
+<p>15</p>
+</blockquote>
+<ul>
+<li><p>Kruskal 算法简述假设 WN=(V,{E}) 是一个含有 n 个顶点的连通网，则按照克鲁斯卡尔算法构造最小生成树的过程为：先构造一个只含 n 个顶点，而边集为空的子图，若将该子图中各个顶点看成是各棵树上的根结点，则它是一个含有 n 棵树的一个森林。之后，从网的边集 E 中选取一条权值最小的边，若该条边的两个顶点分属不同的树，则将其加入子图，也就是说，将这两个顶点分别所在的两棵树合成一棵树；反之，若该条边的两个顶点已落在同一棵树上，则不可取，而应该取下一条权值最小的边再试之。依次类推，直至森林中只有一棵树，也即子图中含有 n-1 条边为止。</p>
+</li>
+<li><p>模拟过程：</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-32e164789d15c188.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="img"></p>
+<p>模拟过程</p>
+</li>
+<li><p>算法难点：（1）边的选择要求从小到大选择，则开始显然要对边进行升序排序。（2）选择的边是否需要，则从判断该边加入后是否构成环入手。</p>
+</li>
+<li><p>算法设计：（1）对边升序排序在此采用链式结构，通过插入排序完成。每一结点存放一条边的左右端点序号、权值及后继结点指针（2）边的加入是否构成环一开始假定各顶点分别为一组，其组号为端点序号。选择某边后，看其两个端点是否在同一组中，即所在组号是否相同，如果是，表示构成了环，则舍去。 如果两个端点所在的组不同，则表示可以加入，则将该边两端的组合并成同一组。</p>
+</li>
+<li><p>代码实现：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct node</span><br><span class="line">&#123;</span><br><span class="line"> int l;</span><br><span class="line"> int r;</span><br><span class="line"> int len;</span><br><span class="line"> node *next;</span><br><span class="line">&#125;;</span><br><span class="line">void insert(node *&amp;h,node *p)   //指针插入排序</span><br><span class="line">&#123;</span><br><span class="line"> node *q=h;</span><br><span class="line"> while(q-&gt;next &amp;&amp; q-&gt;next-&gt;len &lt;= p-&gt;len)</span><br><span class="line"> &#123;</span><br><span class="line">  q=q-&gt;next;</span><br><span class="line"> &#125;</span><br><span class="line"> p-&gt;next=q-&gt;next;</span><br><span class="line"> q-&gt;next=p;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">// freopen(&quot;001.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line"> node *h,*p;</span><br><span class="line"> int n,m,x,temp;</span><br><span class="line"> int *a;</span><br><span class="line"> int i,j;</span><br><span class="line"> int sum;</span><br><span class="line"> cin&gt;&gt;n;</span><br><span class="line"> while(n--)</span><br><span class="line"> &#123;</span><br><span class="line">  sum=0;</span><br><span class="line">  cin&gt;&gt;m;</span><br><span class="line">  a=new int[m+1];</span><br><span class="line">  for (i=1;i&lt;=m;i++)</span><br><span class="line">  &#123;</span><br><span class="line">   a[i]=i;</span><br><span class="line">  &#125;</span><br><span class="line">  h=new node;</span><br><span class="line">  p=h;</span><br><span class="line">  p-&gt;next=NULL;</span><br><span class="line">  for (i=1;i&lt;=m;i++)</span><br><span class="line">   for (j=1;j&lt;=m;j++)</span><br><span class="line">   &#123;</span><br><span class="line">    cin&gt;&gt;x;</span><br><span class="line">    if (i&gt;j &amp;&amp; x!=0)</span><br><span class="line">    &#123;</span><br><span class="line">     p=new node;</span><br><span class="line">     p-&gt;l=i;</span><br><span class="line">     p-&gt;r=j;</span><br><span class="line">     p-&gt;len=x;</span><br><span class="line">     p-&gt;next=NULL;</span><br><span class="line">     insert(h,p);   //调用插入排序</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">          p=h-&gt;next;</span><br><span class="line">   while (p)</span><br><span class="line">   &#123;</span><br><span class="line">    if (a[p-&gt;l]!=a[p-&gt;r])</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">     sum+=p-&gt;len;</span><br><span class="line">     temp=a[p-&gt;l];</span><br><span class="line">     for(i=1;i&lt;=m;i++)</span><br><span class="line">      if (a[i]==temp)</span><br><span class="line">      &#123;</span><br><span class="line">       a[i]=a[p-&gt;r];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   p=p-&gt;next;</span><br><span class="line">   &#125;</span><br><span class="line">   /*   可以测试程序工作是否正常</span><br><span class="line">   p=h-&gt;next;</span><br><span class="line">   while(p)</span><br><span class="line">   &#123;</span><br><span class="line">    cout&lt;&lt;p-&gt;l&lt;&lt;&apos;:&apos;;cout&lt;&lt;p-&gt;r&lt;&lt;&apos; &apos;;</span><br><span class="line">    cout&lt;&lt;p-&gt;len&lt;&lt;&quot;   &quot;;</span><br><span class="line">    p=p-&gt;next;</span><br><span class="line">   &#125;</span><br><span class="line">   */</span><br><span class="line">   cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line"> &#125;</span><br><span class="line"> return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>运行结果</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-a014db737d1ae27d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/418" alt="img"></p>
+<p>image.png</p>
+</li>
+</ul>
+<h2 id="实例-4-hdu1050-Moving-Tables"><a href="#实例-4-hdu1050-Moving-Tables" class="headerlink" title="实例 4 hdu1050-Moving Tables"></a>实例 4 hdu1050-Moving Tables</h2><ul>
+<li>题目描述</li>
+</ul>
+<blockquote>
+<p>在一个狭窄的走廊里将桌子从一个房间移动到另一个房间，走廊的宽度只能允许一个桌子通过。给出 t，表示有 t 组测试数据。再给出 n，表示要移动 n 个桌子。n 下面有 n 行，每行两个数字，表示将桌子从 a 房间移到 b 房间。走廊的分布图如一图所示，每移动一个桌子到达目的地房间需要花 10 分钟，问移动 n 个桌子所需要的时间。</p>
+</blockquote>
+<ul>
+<li>输入</li>
+</ul>
+<blockquote>
+<p>3<br>4<br>10 20<br>30 40<br>50 60<br>70 80<br>2<br>1 3<br>2 200<br>3<br>10 100<br>20 80<br>30 50</p>
+</blockquote>
+<ul>
+<li>输出</li>
+</ul>
+<blockquote>
+<p>10<br>20<br>30</p>
+</blockquote>
+<ul>
+<li>解题思路若移动多个桌子时，所需要经过的走廊没有重合处，即可以同时移动。若有一段走廊有 m 个桌子都要经过，一次只能经过一个桌子，则需要 m*10 的时间移动桌子。 设一个数组，下标值即为房间号。桌子经过房间时，该房间号为下标对应的数组值即加 10。最后找到最大的数组值，即为移动完桌子需要的最短时间。(以上为代码 2，代码 3 同这个思想)<br>注意：</li>
+</ul>
+<ol>
+<li><p>可能出发位置比目的地房间大,无论大小，我们都可以看做从小的房间移动到大的房间</p>
+</li>
+<li><p>出发房间为偶数则减一，结束房间为奇数则加一</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-9c97005356ed25db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="img"></p>
+<p>​</p>
+<p>我们首先输入每次移动的出发和结束房间，然后按每次移动的出发房间从小到大排序，然后直至所有的房间移动完毕。（代码 1 的解释）</p>
+</li>
+</ol>
+<ul>
+<li>代码 1（我自己感觉不是贪心算法，属于暴力破解吧，大家酌情考虑）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct table&#123;</span><br><span class="line">    int from,to;</span><br><span class="line">    bool flag;//记录改房间是否被访问过</span><br><span class="line">&#125;moving[205];</span><br><span class="line"></span><br><span class="line">bool cmp(table a,table b)&#123;</span><br><span class="line">    return a.from&lt;b.from;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int i,T,n;//T代表测试实例个数，n代表每个测试下的table个数</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    while(T--)&#123;</span><br><span class="line">        cin&gt;&gt;n;</span><br><span class="line">        for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">            cin&gt;&gt;moving[i].from&gt;&gt;moving[i].to;</span><br><span class="line">            if(moving[i].from &gt; moving[i].to)</span><br><span class="line">            &#123;</span><br><span class="line">                int temp = moving[i].from;</span><br><span class="line">                moving[i].from = moving[i].to;</span><br><span class="line">                moving[i].to = temp;</span><br><span class="line">            &#125;//可能出发位置比目的地房间大,无论大小，我们都可以看做从小的房间移动到大的房间</span><br><span class="line">            if(moving[i].from%2==0)&#123;//考虑实际情况，出发房间为偶数是减一，可参照题中给出的图一</span><br><span class="line">                moving[i].from--;</span><br><span class="line">            &#125;</span><br><span class="line">            if(moving[i].to%2==1)&#123;//考虑实际情况，结束房间为奇数是加一，</span><br><span class="line">                moving[i].to++;</span><br><span class="line">            &#125;</span><br><span class="line">            moving[i].flag=false;//初始化房间未被访问过</span><br><span class="line">        &#125;</span><br><span class="line">        sort(moving,moving+n,cmp);//将所有table按出发房间从小到大排序;</span><br><span class="line">        bool completion=false;//是否所有的table移动结束</span><br><span class="line">        int cnt=-1,priorTo;//priorTo 记录前一个table移动结束的房间</span><br><span class="line">        while(!completion)&#123;</span><br><span class="line">            completion=true;</span><br><span class="line">            cnt++;</span><br><span class="line">            priorTo=0;</span><br><span class="line">            for(i=0;i&lt;n;i++)&#123;//每一轮将可以同时移动的table全部移动完：比如2-&gt;5,6-&gt;10，因为他们没有共用走廊</span><br><span class="line">                if(!moving[i].flag&amp;&amp;moving[i].from&gt;priorTo)&#123;</span><br><span class="line">                    moving[i].flag=true;//标记当前table已经移动完毕</span><br><span class="line">                    priorTo=moving[i].to;</span><br><span class="line">                    completion=false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;cnt*10&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>代码 1 运行结果</p>
+<p>​</p>
+<p>​</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1531909-69ea5abafe7cfc26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/560" alt="img"></p>
+</li>
+<li><p>代码 2</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int t,n,count[410],i,start,end,k;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;t);</span><br><span class="line">    while(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">        memset(count,0,sizeof(count));</span><br><span class="line">        while(n--)</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%d%d&quot;,&amp;start,&amp;end);</span><br><span class="line">            if(start&gt;end)//可能出发位置比目的地房间大。</span><br><span class="line">            &#123;            //无论大小，我们都可以看做从小的房间移动到大的房间</span><br><span class="line">                k=start;</span><br><span class="line">                start=end;</span><br><span class="line">                end=k;</span><br><span class="line">            &#125;</span><br><span class="line">            if(start%2==0)//考虑实际情况，出发房间为偶数是减一，可参照题中给出的图一</span><br><span class="line">               start-=1;</span><br><span class="line">            if(end%2==1)//目的地房间为奇数时加一</span><br><span class="line">               end+=1;</span><br><span class="line">            for(i=start;i&lt;=end;++i)</span><br><span class="line">               count[i]+=10;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%d\n&quot;,*max_element(count,count+400));//STL中寻找数列最大值函数</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>代码 3</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#define MAXN 500</span><br><span class="line">using namespace std;</span><br><span class="line">struct temp&#123;</span><br><span class="line">    int be,en;</span><br><span class="line">&#125;;</span><br><span class="line">bool comp(temp a,temp b)&#123;</span><br><span class="line">    return a.be&lt;b.be;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    temp my[MAXN];</span><br><span class="line">    int m,n,i;</span><br><span class="line">    cin&gt;&gt;m;</span><br><span class="line">    while(m--)&#123;</span><br><span class="line">        cin&gt;&gt;n;</span><br><span class="line">        i=0;</span><br><span class="line">        int a,b,j;</span><br><span class="line">        while(i&lt;n)&#123;</span><br><span class="line">            cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            if(a&gt;b)a^=b^=a^=b;</span><br><span class="line">            my[i].be=(a+1)/2;</span><br><span class="line">            my[i++].en=(b+1)/2;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(my,my+n,comp);</span><br><span class="line">        int s=0,out=n,t=0;</span><br><span class="line">        int aa[203];</span><br><span class="line">        memset(aa,0,sizeof(aa));</span><br><span class="line">       for(i=0;i&lt;n;++i)&#123;</span><br><span class="line">            for(j=my[i].be;j&lt;=my[i].en;++j)aa[j]++;</span><br><span class="line">       &#125;</span><br><span class="line">       sort(aa,aa+200);</span><br><span class="line">        cout&lt;&lt;aa[199]*10&lt;&lt;&apos;\12&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat-reward-img.jpg" alt="静听、唯美殇 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay-reward-img.jpg" alt="静听、唯美殇 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/电脑/" rel="tag"><i class="fa fa-tag"></i> 电脑</a>
+          
+            <a href="/tags/编程/" rel="tag"><i class="fa fa-tag"></i> 编程</a>
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/ck1lhsu26003m7043vp3mh9tf/" rel="next" title="用手机这么久">
+                <i class="fa fa-chevron-left"></i> 用手机这么久
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/ck1lhstyg000v70435jlyk3a8/" rel="prev" title="cloudsim 配置">
+                cloudsim 配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="静听、唯美殇">
+            
+              <p class="site-author-name" itemprop="name">静听、唯美殇</p>
+              <div class="site-description motion-element" itemprop="description">for love</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+  <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=863481092&auto=1&height=66"></iframe>
+           </div>
+          
+            <div class="feed-link motion-element">
+              <a href="http://www.zhihu.com/rss" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/copyer1998" title="GitHub &rarr; https://github.com/copyer1998" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/yanni31316" title="Weibo &rarr; http://weibo.com/yanni31316" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yzqdev@outlook.com" title="E-Mail &rarr; mailto:yzqdev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://zhihu.com" title="zhihu &rarr; https://zhihu.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-battery-full"></i>zhihu</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3cplus.com/" title="https://www.w3cplus.com/" rel="noopener" target="_blank">w3cplus</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="https://segmentfault.com/" rel="noopener" target="_blank">segmentfault</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.oschina.net/" title="http://www.oschina.net/" rel="noopener" target="_blank">开源中国</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.csdn.net/" title="https://www.csdn.net/" rel="noopener" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/yanni-87/activities" title="https://www.zhihu.com/people/yanni-87/activities" rel="noopener" target="_blank">友链出租</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心算法总结"><span class="nav-number">1.</span> <span class="nav-text">贪心算法总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心算法"><span class="nav-number">2.</span> <span class="nav-text">贪心算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本思路"><span class="nav-number">3.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法实现"><span class="nav-number">4.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例分析"><span class="nav-number">5.</span> <span class="nav-text">实例分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-1-背包问题"><span class="nav-number">5.1.</span> <span class="nav-text">实例 1 背包问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-2-活动安排问题"><span class="nav-number">5.2.</span> <span class="nav-text">实例 2 活动安排问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-3-最小生成树（克鲁斯卡尔算法）"><span class="nav-number">5.3.</span> <span class="nav-text">实例 3 最小生成树（克鲁斯卡尔算法）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-4-hdu1050-Moving-Tables"><span class="nav-number">5.4.</span> <span class="nav-text">实例 4 hdu1050-Moving Tables</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank"> </a>&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">静听、唯美殇</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">371k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">11:15</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery_lazyload@1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.0"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'S24KfGBIM1Deqy65toUIUymq-gzGzoHsz',
+    appKey: 'EIUyk8fOu1seYDQGNYXyyf0n',
+    placeholder: '✍如果您希望得到作者的回复，请填写上方E-mail地址以便回复',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+  //新增以下代码即可，可以移除.info下所有子节点。
+var infoEle = document.querySelector('#comments .info');
+if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+  infoEle.childNodes.forEach(function(item) {
+    item.parentNode.removeChild(item);
+  });
+}
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('manual', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/live2d-widget","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+</html>

@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="IDEA 插件汇总标签： 插件  IDEA 插件安装 IDEA 的插件安装非常简单，对于很多插件来说，只要你知道插件的名字就可以在 IDEA 里面直接安装 在线安装如图 :  Preferences—&amp;gt;Plugins—&amp;gt; 查找所需插件 —&amp;gt;Install   或者 离线安装 Preferences—&amp;gt;Plugins—&amp;gt;Install plug from disk —&amp;">
+<meta name="keywords" content="Windows,Config">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDEA插件汇总">
+<meta property="og:url" content="https://yzqdev.github.io/2017/ck1lhstx2000a7043q7s4pzjv/index.html">
+<meta property="og:site_name" content="七月飞雪">
+<meta property="og:description" content="IDEA 插件汇总标签： 插件  IDEA 插件安装 IDEA 的插件安装非常简单，对于很多插件来说，只要你知道插件的名字就可以在 IDEA 里面直接安装 在线安装如图 :  Preferences—&amp;gt;Plugins—&amp;gt; 查找所需插件 —&amp;gt;Install   或者 离线安装 Preferences—&amp;gt;Plugins—&amp;gt;Install plug from disk —&amp;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/H3b0kGN.png">
+<meta property="og:image" content="https://i.imgur.com/lJHUe89.png">
+<meta property="og:image" content="https://i.imgur.com/vyHGRRD.png">
+<meta property="og:image" content="https://i.imgur.com/zAXJ8Ht.png">
+<meta property="og:image" content="https://i.imgur.com/Rhp6pAD.png">
+<meta property="og:image" content="https://i.imgur.com/VzWHU7e.png">
+<meta property="og:image" content="https://i.imgur.com/ImMzjQF.png">
+<meta property="og:image" content="https://i.imgur.com/tCVcR2Y.png">
+<meta property="og:image" content="https://i.imgur.com/Sb4Q499.gif">
+<meta property="og:image" content="https://i.imgur.com/BhDmV1J.png">
+<meta property="og:image" content="https://i.imgur.com/Qqzg7Zo.png">
+<meta property="og:image" content="https://i.imgur.com/iwRTDD6.png">
+<meta property="og:image" content="https://i.imgur.com/M2Pi3sJ.png">
+<meta property="og:image" content="https://i.imgur.com/0Jf004B.png">
+<meta property="og:image" content="https://i.imgur.com/8GjsngS.png">
+<meta property="og:image" content="https://i.imgur.com/06vnFkn.png">
+<meta property="og:image" content="https://i.imgur.com/NGlknOm.png">
+<meta property="og:updated_time" content="2019-04-06T05:27:57.426Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IDEA插件汇总">
+<meta name="twitter:description" content="IDEA 插件汇总标签： 插件  IDEA 插件安装 IDEA 的插件安装非常简单，对于很多插件来说，只要你知道插件的名字就可以在 IDEA 里面直接安装 在线安装如图 :  Preferences—&amp;gt;Plugins—&amp;gt; 查找所需插件 —&amp;gt;Install   或者 离线安装 Preferences—&amp;gt;Plugins—&amp;gt;Install plug from disk —&amp;">
+<meta name="twitter:image" content="https://i.imgur.com/H3b0kGN.png">
+
+
+
+  <link rel="alternate" href="http://www.zhihu.com/rss" title="七月飞雪" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://yzqdev.github.io/2017/ck1lhstx2000a7043q7s4pzjv/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>IDEA插件汇总 | 七月飞雪</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">七月飞雪</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">YZQ BLOG</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">33</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/yzqdev/yzqdev.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yzqdev.github.io/2017/ck1lhstx2000a7043q7s4pzjv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="静听、唯美殇">
+      <meta itemprop="description" content="for love">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="七月飞雪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">IDEA插件汇总
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-01-30 12:41:00" itemprop="dateCreated datePublished" datetime="2017-01-30T12:41:00+08:00">2017-01-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-06 13:27:57" itemprop="dateModified" datetime="2019-04-06T13:27:57+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Configuration/" itemprop="url" rel="index"><span itemprop="name">Configuration</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/ck1lhstx2000a7043q7s4pzjv/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/ck1lhstx2000a7043q7s4pzjv/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2017/ck1lhstx2000a7043q7s4pzjv/" class="leancloud_visitors" data-flag-title="IDEA插件汇总">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">15k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">28 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="IDEA-插件汇总"><a href="#IDEA-插件汇总" class="headerlink" title="IDEA 插件汇总"></a>IDEA 插件汇总</h1><p>标签： 插件</p>
+<hr>
+<h2 id="IDEA-插件安装"><a href="#IDEA-插件安装" class="headerlink" title="IDEA 插件安装"></a>IDEA 插件安装</h2><p> IDEA 的插件安装非常简单，对于很多插件来说，只要你知道插件的名字就可以在 IDEA 里面直接安装</p>
+<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>如图 :</p>
+<blockquote>
+<p>Preferences—&gt;Plugins—&gt; 查找所需插件 —&gt;Install</p>
+</blockquote>
+<p><img src="https://i.imgur.com/H3b0kGN.png" alt> 或者</p>
+<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><blockquote>
+<p>Preferences—&gt;Plugins—&gt;Install plug from disk —&gt; 选择下载好的插件安装</p>
+</blockquote>
+<p>在 IntelliJ IDEA 的安装讲解中我们其实已经知道，IntelliJ IDEA 本身很多功能也都是<br>通过插件的方式来实现的，只是 IntelliJ IDEA 本身就是它自己的插件平台最大的开发者<br>而已，开发了很多优秀的插件。</p>
+<ul>
+<li>官网插件库<br>：<a href="https://plugins.jetbrains.com/" target="_blank" rel="noopener">插件</a><a href="https://plugins.jetbrains.com/" target="_blank" rel="noopener">https://plugins.jetbrains.com/</a></li>
+</ul>
+<p><img src="https://i.imgur.com/lJHUe89.png" alt></p>
+ <a id="more"></a>
+
+<h2 id="推荐的插件"><a href="#推荐的插件" class="headerlink" title="推荐的插件"></a>推荐的插件</h2><h3 id="Maven-Helper"><a href="#Maven-Helper" class="headerlink" title="Maven Helper"></a>Maven Helper</h3><p>我一般用这款插件来查看 maven 的依赖树。在不使用此插件的情况下，要想查看 maven 的<br>依赖树就要使用 Maven 命令<code>maven dependency:tree</code>来查看依赖。，但是这样还是需要我<br>执行命令，并且当项目比较复杂的时候，这个过程是比较漫长的。maven helper 就能很好<br>的解决这个问题。</p>
+<p>一旦安装了<a href="https://plugins.jetbrains.com/plugin/7179?pr=idea" target="_blank" rel="noopener">Maven Helper</a>插件<br>，只要打开 pom 文件，就可以打开该 pom 文件的 Dependency Analyzer 视图（在文件打<br>开之后，文件下面会多出这样一个 tab），进入 Dependency Analyzer 视图之后有三个查<br>看选项，分别是 Conflicts( 冲突 )、All Dependencies as List( 列表形式查看所有依赖<br>)、All Dependencies as Tree( 树结构查看所有依赖 )。并且这个页面还支持搜索。很方<br>便！并且使用该插件还能快速的执行 maven 命令。</p>
+<p>来一张 maven helper 提供的图片感受一下： <img src="https://i.imgur.com/vyHGRRD.png" alt><br><img src="https://i.imgur.com/zAXJ8Ht.png" alt></p>
+<h3 id="FindBugs-IDEA"><a href="#FindBugs-IDEA" class="headerlink" title="FindBugs-IDEA"></a>FindBugs-IDEA</h3><p><a href="https://plugins.jetbrains.com/plugin/3847?pr=idea" target="_blank" rel="noopener">FindBugs</a>很多人都并不陌生<br>，Eclipse 中有插件可以帮助查找代码中隐藏的 bug，IDEA 中也有这款插件。</p>
+<p>使用方法很简单，就是可以对多种级别的内容进行 finbugs</p>
+<p><img src="https://i.imgur.com/Rhp6pAD.png" alt> 分析完之后会有一个视图进行提示，详细的说明<br>是哪种问题。 <img src="https://i.imgur.com/VzWHU7e.png" alt> 按照提示解决完问题之后再执行<br>findbug 查看情况即可。</p>
+<hr>
+<h3 id="CheckStyle-IDEA"><a href="#CheckStyle-IDEA" class="headerlink" title="CheckStyle-IDEA"></a>CheckStyle-IDEA</h3><p>通过检查对代码编码格式，命名约定，Javadoc ，类设计等方面进行代码规范和风格的检查<br>，从而有效约束开发人员更好地遵循代码编写规范。软件安装成功之后，首先要设置规则。<br>可以通过</p>
+<blockquote>
+<p>Preferences—&gt;Other Settings —&gt;CheckStyles</p>
+</blockquote>
+<p>进行设置，可以直接将文件添加进来，然后就可以对具体的文件进行检查了。<br><img src="https://i.imgur.com/ImMzjQF.png" alt> 同样，该插件也有个单独的视图，该视图可以展<br>示检查结果。 <img src="https://i.imgur.com/tCVcR2Y.png" alt></p>
+<hr>
+<h3 id="GsonFormat"><a href="#GsonFormat" class="headerlink" title="GsonFormat"></a>GsonFormat</h3><p>Java 开发中，经常有把 json 格式的内容转成 Object 的需求，GsonFormat 这款插件可以<br>实现该功能。</p>
+<p><img src="https://i.imgur.com/Sb4Q499.gif" alt></p>
+<hr>
+<h3 id="AceJump"><a href="#AceJump" class="headerlink" title="AceJump"></a>AceJump</h3><p>AceJump 其实是一款能够代替鼠标的软件，只要安装了这款插件，可以在代码中跳转到任意<br>位置。</p>
+<p>操作 : 第 1 步：Ctrl+; 快捷键，激活插件。此时，IDE 代码编辑区会出现一个蓝色光标<br>，然后输入你要跳转的标签。</p>
+<p>第 2 步，这是，IDE 全屏所有你刚才输入的标签都会被高亮显示，并且在这个高亮的标签<br>前面会出现相应的键盘字母，你按照相应提示的字母去敲击键盘就可以自动跳转了。<br><img src="https://i.imgur.com/BhDmV1J.png" alt></p>
+<hr>
+<h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><p>安装这个插件之后，打开 .md 文件就可以通过一个支持 md 的视图查看和编辑内容。一般<br>用于写 README.md 文件。但是这个插件我不太用，因为他对 md 语法支持的并不是很好</p>
+<hr>
+<h3 id="Key-promoter"><a href="#Key-promoter" class="headerlink" title="Key promoter"></a>Key promoter</h3><p>很多开发都是从 Eclipse 转到 Idea 的。用习惯了 Eclipse 的快捷键之后在使用 IDEA 真<br>的非常不习惯。Key promoter 这款插件适合新手使用。当你点击鼠标一个功能的时候，可<br>以提示你这个功能快捷键是什么。</p>
+<h3 id="ideaVim"><a href="#ideaVim" class="headerlink" title="ideaVim"></a>ideaVim</h3><p>这个插件的作用是在 Intellij 中模拟 Vim 的操作方式。咋看上去，似乎是一个只有 Vim<br>的狂热玩家才会选用的插件。但事实上这个插件提供了一个非常实用功能，让它成为了我们<br>这种普通开发者居家旅行的必备选择。这个功能是，IdeaVim 允许设置一个快捷键来激活或<br>关闭 IdeaVim 模拟器，而且在激活或关闭时，会自动切换 Keymap。也就是说，你在输入大<br>段代码时，可以使用自己惯用的 Keymap。在阅读代码，小范围修改，或者进行一些重复性<br>修改时，可以切换到 Vim 模式。甚至你可以把 “ 关闭 IdeaVim” 看做 “ 增强的 Vim 插入<br>模式 ”。有了 Vim 普通模式下的各种功能，就可以省去记忆大量快捷键的苦恼，而且本来<br>熟悉 vim 使用，是程序员迟早都要遇到的问题。</p>
+<ol>
+<li><p>在普通模式下输入 :s/ 正则表达式 / 替换文本 /g 可以在当前行范围内查找替换。（<br>在正常的 IDEA 中需要选中当前行后在当前选区查找替换）</p>
+</li>
+<li><p>在普通模式下输入 小数点 将在当前光标位置重复上一次修改操作。例如你在某一行进<br>行了上述的查找替换，如果立即需要在另一行做同样操作，把光标移动到该行按小数点<br>即可。</p>
+</li>
+<li><p>yyp 复制当前行。 yy10p 复制当前行 10 次</p>
+</li>
+<li><p>u 撤销修改 / Ctrl+R 重做修改</p>
+</li>
+<li><p>q 加任何单个数字或字母，录制后续操作，记录到名为该数字或字母的宏（Macro ）中<br>。在录制状态下按 q 结束录制。@ 加某个已录制的宏名（单个数字或字母），回放宏。<br>录制的宏只要不被覆盖，会自动保存。重启 IDEA 后仍然有效。（在正常的 IDEA 中使<br>用宏需要进行菜单操作，不甚方便）</p>
+</li>
+<li><p>daw 删除一个单词，d$ 删除至行尾，d0 删除至行首（包括缩进）， d^ 删除至行首（<br>保留缩进）， dd 删除当前行。删除后按 p 可以复制删除内容。</p>
+</li>
+<li><p>J 直接把下一行连接到本行末尾，去除缩进</p>
+</li>
+<li><p>% 跳到匹配的括号</p>
+</li>
+<li><p>10ib<esc> 插入 10 个 b。（数字）i/a/o/O （字符串）<esc> 可插入 n 个重复字符串<br>，i 在光标前插入，a 在光标后插入，o 在下一行插入，O 在上一行插入。注意在 IDEA<br>默认情况下输入 “i 字符 ” 后会弹出自动补全菜单，需要多按一下 ESC 取消掉补全菜<br>单。</esc></esc></p>
+</li>
+<li><p>在一个数字上按 ctrl+a，可将该数字加 1. 按 ctrl+x 可将数字减 1. 按（数字<br>）ctrl+a ，可将光标数字加上输入的数字。</p>
+</li>
+<li><p>~ - 将光标下的字母改变大小写。 g~aw - 改变当前单词的大小写。gU&lt; 空格 &gt; - 当<br>前字母改大写。gu&lt; 空格 &gt; - 当前字母改小写。 gUaw - 当前单词改大写。 guaw -<br>当前单词改小写。 在字符串前面的引号上 gUf” - 字符串改大写。</p>
+</li>
+<li><p>行号 G - 直接移动到某行。（使用 IDEA 的 Ctrl+G 会弹出对话框，且移动到的那行<br>会自动居中，颇为眼花）</p>
+</li>
+<li><p>H - 光标移动到屏幕第一行。 L - 光标移动到屏幕最后一行。 M - 光标移动到屏幕中<br>间。 zz - 光标所在行居中</p>
+</li>
+</ol>
+<h3 id="CodeGlance"><a href="#CodeGlance" class="headerlink" title="CodeGlance"></a>CodeGlance</h3><p>类似 SublimeText 的 Mini Map 插件</p>
+<p><img src="https://i.imgur.com/Qqzg7Zo.png" alt></p>
+<h3 id="Background-Image-Plus"><a href="#Background-Image-Plus" class="headerlink" title="Background Image Plus"></a>Background Image Plus</h3><p>这又是一款装备 B 插件了，想想别人看到你的 IDE 背景是怎样的，安装之后，在打开<br>View 选项，就可以看到 Set Background Image 选项了<br><img src="https://i.imgur.com/iwRTDD6.png" alt></p>
+<h3 id="Shifter"><a href="#Shifter" class="headerlink" title="Shifter"></a>Shifter</h3><p>检测光标所在选中、行或关键字的类型，然后用键盘快捷键上的 “up” 或 “down” 键移动它<br>。如果在一行中只有一个可移动的单词，那么它不需要碰触光标，我们就可以移动它。支持<br>小写 / 大写或小写所移动单词中的第一个大写的字符。</p>
+<p>默认快捷键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Shift + Alt+逗号：下移</span><br><span class="line">Ctrl + Shift + Alt +句号：上移</span><br><span class="line">Ctrl + Shift + Alt + K：上移更多</span><br><span class="line">Ctrl + Shift + Alt + J：下移更多</span><br></pre></td></tr></table></figure>
+
+<p>移动更多：多次重复选择所选中的值。重复次数可在插件配置中进行配置（默认为 10）</p>
+<h3 id="bashsupport"><a href="#bashsupport" class="headerlink" title="bashsupport"></a>bashsupport</h3><p>linux支持…<br>对于IntelliJ的Bash语言支持。它支持语法高亮，更名重构，文档查询，检查，快速修复。BashSupport可以直接在IntelliJ中运行脚本。你可以为bash脚本创建一个新的运行配置。在这里你可以设置哪个解释器是用来运行它。每当执行脚本时，就会记录输出。如果Bash打印出语法错误，那么点击错误的行就可以跳到错误的位置。</p>
+<hr>
+<h3 id="Cmd-Support"><a href="#Cmd-Support" class="headerlink" title="Cmd Support"></a>Cmd Support</h3><p>我们已经可以用命令行来调度脚本了，但是每次执行的时候不是要到对应目录下去双击文件就是要在命令行中敲出对应的脚本执行语句这里我们又一个更方便的工具执行脚本,cmd support,他允许直接运行cmd或者bat文件,与windows的bat完全一样.右键run cmd script</p>
+<p><img src="https://i.imgur.com/M2Pi3sJ.png" alt></p>
+<hr>
+<h3 id="String-Manipulation"><a href="#String-Manipulation" class="headerlink" title="String Manipulation"></a>String Manipulation</h3><p>提供强大的文本转换操作：</p>
+<p>切换样式（camelCase, hyphen-lowercase, HYPHEN-UPPERCASE, snakecase, SCREAMINGSNAKE_CASE, dot.case, words lowercase, Words Capitalized, PascalCase）</p>
+<ul>
+<li>转换为SCREAMINGSNAKECASE (或转换为camelCase)</li>
+<li>转换为 snake_case (或转换为camelCase)</li>
+<li>转换为dot.case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为snake_case)</li>
+<li>转换为camelCase (或转换为Words)</li>
+<li>转换为camelCase (或转换为lowercase words)</li>
+<li>转换为PascalCase (或转换为camelCase)</li>
+<li>选定文本大写</li>
+<li>样式反转</li>
+</ul>
+<p>Un/Escape:</p>
+<ul>
+<li><p>Un/Escape 选中的 java 文本</p>
+</li>
+<li><p>Un/Escape 选中的 javascript 文本</p>
+</li>
+<li><p>Un/Escape 选中的 HTML 文本</p>
+</li>
+<li><p>Un/Escape 选中的 XML 文本</p>
+</li>
+<li><p>Un/Escape 选中的 SQL 文本</p>
+</li>
+<li><p>Un/Escape 选中的 PHP 文本</p>
+</li>
+<li><p>将 diacritics(accents) 转换为 ASCII</p>
+</li>
+<li><p>将非ASCII 转换为转义的Unicode</p>
+</li>
+<li><p>将转义的Unicode转换为字符串<br>Encode/Decode:</p>
+</li>
+<li><p>Encode 选中的文本为 MD5 Hex16</p>
+</li>
+<li><p>De/Encode 选中的文本为 URL</p>
+</li>
+<li><p>De/Encode 选中的文本为 Base64</p>
+</li>
+<li><p>递增/递减:</p>
+</li>
+<li><p>递增/递减所有找到的数字</p>
+</li>
+<li><p>复制行并且递增/递减所有找到的数字</p>
+</li>
+<li><p>创建序列：保持第一个数字，递增替换所有其他数字</p>
+</li>
+<li><p>递增重复的数字</p>
+</li>
+</ul>
+<p>按自然顺序排序:</p>
+<ul>
+<li>按行倒序</li>
+<li>按行随机排序</li>
+<li>区分大小写A-z排序</li>
+<li>区分大小写z-A排序</li>
+<li>不区分大小写A-Z排序</li>
+<li>不区分大小写Z-A排序</li>
+<li>按行长度排序</li>
+<li>通过子选择行排序：每行仅处理一个选择/插入符号</li>
+</ul>
+<p>对齐：</p>
+<ul>
+<li>通过选定的分隔将选定的文本格式化为列/表格</li>
+<li>将文本对齐为左/中/右</li>
+</ul>
+<p>过滤/删除/移除：</p>
+<ul>
+<li>grep选定的文本，所有行不匹配输入文字将被删除。 （不能在列模式下工作）</li>
+<li>移除选定的文本</li>
+<li>移除选定文本中的所有空格</li>
+<li>删除选定文本中的所有空格</li>
+<li>删除重复的行</li>
+<li>只保留重复的行</li>
+<li>删除空行</li>
+<li>删除所有换行符</li>
+</ul>
+<p>其他:</p>
+<ul>
+<li>交换字符/选择/线/标记</li>
+<li>切换文件路径分隔符：Windows &lt; - &gt; UNIX</li>
+</ul>
+<hr>
+<h3 id="Grep-Console"><a href="#Grep-Console" class="headerlink" title="Grep Console"></a>Grep Console</h3><p>允许你定义一系列将通过控制台输出或文件测试的正则表达式。匹配代码行的每个表达式将会影响整行的样式，或播放声音。例如，错误消息可以被设置在一个红色的背景中显示。</p>
+<p>附加功能：ANSI着色</p>
+<p>File Tailing：</p>
+<ul>
+<li>Main menu | Tools | Open File in Console</li>
+<li>Main Menu | Help | Tail (IntelliJ) Log in Console</li>
+<li>在主工具条中拖放“Tail File”面板</li>
+<li>HTTP和Windows右键菜单集成<br><img src="https://i.imgur.com/0Jf004B.png" alt></li>
+</ul>
+<hr>
+<h3 id="ignore"><a href="#ignore" class="headerlink" title=".ignore"></a>.ignore</h3><p>版本控制时标记一些不需要上传到git上的文件把不需要的文件添加到.ignorefiles中,文件就不会上传到git,<br><img src="https://i.imgur.com/8GjsngS.png" alt><br>比如本次的,<code>.idea</code>文件夹是我的工程配置文件包括了我的jdk位置,jar包位置等信息,别人打开就是出现错误,还是不要上传到git上好,<code>target</code>是编译后的class文件,也不需要上传,<code>courses.iml</code>是 intellij idea的工程配置文件,里面是当前projec的一些配置信息 </p>
+<hr>
+<h3 id="markdown-navigator"><a href="#markdown-navigator" class="headerlink" title="markdown navigator"></a>markdown navigator</h3><p>书写 Markdown 文章<br>比自带的markdown要好一点<br>如图:<br><img src="https://i.imgur.com/06vnFkn.png" alt></p>
+<hr>
+<h3 id="Properties-to-YAML-Converter"><a href="#Properties-to-YAML-Converter" class="headerlink" title="Properties to YAML Converter"></a>Properties to YAML Converter</h3><p>把 Properties 的配置格式改为 YAML 格式</p>
+<hr>
+<h3 id="statistic"><a href="#statistic" class="headerlink" title="statistic"></a>statistic</h3><p>使用statistic插件可以统计代码总行数<br>在idea左下角点击statistic图标<br><img src="https://i.imgur.com/NGlknOm.png" alt><br>显示各个文件的行数,代码数</p>
+<hr>
+<h3 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h3><ol>
+<li>安装lombok插件</li>
+<li>在自己的项目里添加lombok的编译支持(此处本人所操作的项目为maven项目),在pom文件里面添加如下indenpence</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;1.16.6&lt;/version&gt;</span><br><span class="line"></span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 3 . 然后就可以尽情在自己项目里面编写简略风格的Java代码咯</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lombok;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> lombok.Data;</span><br><span class="line">    <span class="keyword">import</span> lombok.EqualsAndHashCode;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Created by Hinsteny on 2016/1/3.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="meta">@EqualsAndHashCode</span>(callSuper = <span class="keyword">false</span>)</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String name;</span><br><span class="line">        <span class="keyword">int</span> sex;</span><br><span class="line">        Integer age;</span><br><span class="line">        String address;</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; books;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用Student类对象</span></span><br><span class="line">    Student student = <span class="keyword">new</span> Student();</span><br><span class="line">    student.setName(name);</span><br><span class="line">    student.setAge(age);</span><br><span class="line">    student.setAddress(address);</span><br><span class="line">    student.setBooks(Arrays.asList(books));</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat-reward-img.jpg" alt="静听、唯美殇 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay-reward-img.jpg" alt="静听、唯美殇 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          
+            <a href="/tags/Config/" rel="tag"><i class="fa fa-tag"></i> Config</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/ck1lhsu2a003o7043d6zkvklp/" rel="next" title="电脑小技巧">
+                <i class="fa fa-chevron-left"></i> 电脑小技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/ck1lhsu1a002w7043wa90sg0e/" rel="prev" title="大前端工具集">
+                大前端工具集 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="静听、唯美殇">
+            
+              <p class="site-author-name" itemprop="name">静听、唯美殇</p>
+              <div class="site-description motion-element" itemprop="description">for love</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+  <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=863481092&auto=1&height=66"></iframe>
+           </div>
+          
+            <div class="feed-link motion-element">
+              <a href="http://www.zhihu.com/rss" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/copyer1998" title="GitHub &rarr; https://github.com/copyer1998" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/yanni31316" title="Weibo &rarr; http://weibo.com/yanni31316" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yzqdev@outlook.com" title="E-Mail &rarr; mailto:yzqdev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://zhihu.com" title="zhihu &rarr; https://zhihu.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-battery-full"></i>zhihu</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3cplus.com/" title="https://www.w3cplus.com/" rel="noopener" target="_blank">w3cplus</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="https://segmentfault.com/" rel="noopener" target="_blank">segmentfault</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.oschina.net/" title="http://www.oschina.net/" rel="noopener" target="_blank">开源中国</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.csdn.net/" title="https://www.csdn.net/" rel="noopener" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/yanni-87/activities" title="https://www.zhihu.com/people/yanni-87/activities" rel="noopener" target="_blank">友链出租</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDEA-插件汇总"><span class="nav-number">1.</span> <span class="nav-text">IDEA 插件汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA-插件安装"><span class="nav-number">1.1.</span> <span class="nav-text">IDEA 插件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在线安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">在线安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#离线安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">离线安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐的插件"><span class="nav-number">1.2.</span> <span class="nav-text">推荐的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Maven-Helper"><span class="nav-number">1.2.1.</span> <span class="nav-text">Maven Helper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FindBugs-IDEA"><span class="nav-number">1.2.2.</span> <span class="nav-text">FindBugs-IDEA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CheckStyle-IDEA"><span class="nav-number">1.2.3.</span> <span class="nav-text">CheckStyle-IDEA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GsonFormat"><span class="nav-number">1.2.4.</span> <span class="nav-text">GsonFormat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AceJump"><span class="nav-number">1.2.5.</span> <span class="nav-text">AceJump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown"><span class="nav-number">1.2.6.</span> <span class="nav-text">markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-promoter"><span class="nav-number">1.2.7.</span> <span class="nav-text">Key promoter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ideaVim"><span class="nav-number">1.2.8.</span> <span class="nav-text">ideaVim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodeGlance"><span class="nav-number">1.2.9.</span> <span class="nav-text">CodeGlance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-Image-Plus"><span class="nav-number">1.2.10.</span> <span class="nav-text">Background Image Plus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shifter"><span class="nav-number">1.2.11.</span> <span class="nav-text">Shifter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bashsupport"><span class="nav-number">1.2.12.</span> <span class="nav-text">bashsupport</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cmd-Support"><span class="nav-number">1.2.13.</span> <span class="nav-text">Cmd Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-Manipulation"><span class="nav-number">1.2.14.</span> <span class="nav-text">String Manipulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grep-Console"><span class="nav-number">1.2.15.</span> <span class="nav-text">Grep Console</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ignore"><span class="nav-number">1.2.16.</span> <span class="nav-text">.ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown-navigator"><span class="nav-number">1.2.17.</span> <span class="nav-text">markdown navigator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties-to-YAML-Converter"><span class="nav-number">1.2.18.</span> <span class="nav-text">Properties to YAML Converter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#statistic"><span class="nav-number">1.2.19.</span> <span class="nav-text">statistic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lombok"><span class="nav-number">1.2.20.</span> <span class="nav-text">lombok</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank"> </a>&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">静听、唯美殇</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">371k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">11:15</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery_lazyload@1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.0"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'S24KfGBIM1Deqy65toUIUymq-gzGzoHsz',
+    appKey: 'EIUyk8fOu1seYDQGNYXyyf0n',
+    placeholder: '✍如果您希望得到作者的回复，请填写上方E-mail地址以便回复',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+  //新增以下代码即可，可以移除.info下所有子节点。
+var infoEle = document.querySelector('#comments .info');
+if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+  infoEle.childNodes.forEach(function(item) {
+    item.parentNode.removeChild(item);
+  });
+}
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('manual', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/live2d-widget","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+</html>

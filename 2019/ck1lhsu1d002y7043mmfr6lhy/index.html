@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="##安装 Kali Linux 后需要做的 20 件事  专门针对Kali用户  Kali Linux是来自Debian的一个特殊版本，Kali Linux同样存在Debian Linux的许多问题。这部分为读者介绍如何解决那些问题。它们并不是Kali Linux特有的问题，你可以不用理它们；不过我看到错误，强迫症就会发作，非解决错误不可。  实用工具和软件  这部分汇集了我觉得有用的一批实用工具">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装 Kali Linux 后需要做的 20 件事">
+<meta property="og:url" content="https://yzqdev.github.io/2019/ck1lhsu1d002y7043mmfr6lhy/index.html">
+<meta property="og:site_name" content="七月飞雪">
+<meta property="og:description" content="##安装 Kali Linux 后需要做的 20 件事  专门针对Kali用户  Kali Linux是来自Debian的一个特殊版本，Kali Linux同样存在Debian Linux的许多问题。这部分为读者介绍如何解决那些问题。它们并不是Kali Linux特有的问题，你可以不用理它们；不过我看到错误，强迫症就会发作，非解决错误不可。  实用工具和软件  这部分汇集了我觉得有用的一批实用工具">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://s9.51cto.com/wyfs02/M02/27/A3/wKioL1N0Hy-i06pCAAAgIjTDXr8423.jpg">
+<meta property="og:image" content="http://s2.51cto.com/wyfs02/M01/27/A3/wKiom1N0IObgDue-AACpKMTi3-c960.jpg-wh_600x-s_172056694.jpg">
+<meta property="og:image" content="http://s6.51cto.com/wyfs02/M00/27/A3/wKiom1N0IRTQukfGAAArMCRuLXE293.jpg">
+<meta property="og:image" content="http://s6.51cto.com/wyfs02/M01/27/A4/wKioL1N0It3TyKrZAAAaS9wNA8A431.jpg">
+<meta property="og:image" content="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0IvbjIKVZAAA7MAScvTA573.jpg">
+<meta property="og:image" content="http://s7.51cto.com/wyfs02/M00/27/A3/wKiom1N0I0DjXhX2AAFne0roxq4680.jpg-wh_600x-s_4088219889.jpg">
+<meta property="og:image" content="http://s9.51cto.com/wyfs02/M01/27/A4/wKiom1N0I2GBapXSAACLWDMY0dw505.jpg-wh_600x-s_4269129613.jpg">
+<meta property="og:image" content="http://s4.51cto.com/wyfs02/M00/27/A4/wKioL1N0I1KQufG6AACOljq0ol4768.jpg">
+<meta property="og:image" content="http://s5.51cto.com/wyfs02/M02/27/A4/wKiom1N0I5-QfEBhAABIf_rComI556.jpg">
+<meta property="og:image" content="http://s7.51cto.com/wyfs02/M01/27/A4/wKioL1N0I47SrBAOAAEB_M5IxdQ529.jpg-wh_600x-s_3985124782.jpg">
+<meta property="og:image" content="http://s5.51cto.com/wyfs02/M00/27/A4/wKiom1N0I9Xi8fM0AACYvIEHZfo419.jpg">
+<meta property="og:image" content="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0I8Gjr6zsAACQejk0gHM378.jpg-wh_600x-s_1867495804.jpg">
+<meta property="og:image" content="http://s1.51cto.com/wyfs02/M01/27/A4/wKiom1N0JBDBe1VvAADDRIbD5CU947.jpg-wh_600x-s_3814205756.jpg">
+<meta property="og:updated_time" content="2019-04-06T05:27:58.065Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装 Kali Linux 后需要做的 20 件事">
+<meta name="twitter:description" content="##安装 Kali Linux 后需要做的 20 件事  专门针对Kali用户  Kali Linux是来自Debian的一个特殊版本，Kali Linux同样存在Debian Linux的许多问题。这部分为读者介绍如何解决那些问题。它们并不是Kali Linux特有的问题，你可以不用理它们；不过我看到错误，强迫症就会发作，非解决错误不可。  实用工具和软件  这部分汇集了我觉得有用的一批实用工具">
+<meta name="twitter:image" content="http://s9.51cto.com/wyfs02/M02/27/A3/wKioL1N0Hy-i06pCAAAgIjTDXr8423.jpg">
+
+
+
+  <link rel="alternate" href="http://www.zhihu.com/rss" title="七月飞雪" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://yzqdev.github.io/2019/ck1lhsu1d002y7043mmfr6lhy/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>安装 Kali Linux 后需要做的 20 件事 | 七月飞雪</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">七月飞雪</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">YZQ BLOG</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">33</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/yzqdev/yzqdev.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yzqdev.github.io/2019/ck1lhsu1d002y7043mmfr6lhy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="静听、唯美殇">
+      <meta itemprop="description" content="for love">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="七月飞雪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">安装 Kali Linux 后需要做的 20 件事
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-08 12:17:00" itemprop="dateCreated datePublished" datetime="2019-01-08T12:17:00+08:00">2019-01-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-06 13:27:58" itemprop="dateModified" datetime="2019-04-06T13:27:58+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/ck1lhsu1d002y7043mmfr6lhy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/ck1lhsu1d002y7043mmfr6lhy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/ck1lhsu1d002y7043mmfr6lhy/" class="leancloud_visitors" data-flag-title="安装 Kali Linux 后需要做的 20 件事">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">27k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">49 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##安装 Kali Linux 后需要做的 20 件事</p>
+<ul>
+<li><strong>专门针对Kali用户</strong></li>
+</ul>
+<p>Kali Linux是来自Debian的一个特殊版本，Kali Linux同样存在Debian Linux的许多问题。这部分为读者介绍如何解决那些问题。它们并不是Kali Linux特有的问题，你可以不用理它们；不过我看到错误，强迫症就会发作，非解决错误不可。</p>
+<ul>
+<li><strong>实用工具和软件</strong></li>
+</ul>
+<p>这部分汇集了我觉得有用的一批实用工具和软件。这些是大多数其他Linux发行版里面也有的日常软件，或者至少我认为它们应作为默认安装系统的一部分而出现。</p>
+<ul>
+<li><strong>改进和辅助功能</strong></li>
+</ul>
+<p>Kali Linux天生具有启动速度快、占用资源少的特点。但如果你有一些CPU和GPU能力可用，不妨试着让Kali Linix的外观更靓丽一些。</p>
+<p><strong>专门针对Kali用户</strong></p>
+<p><strong>1. 解决有线网络的”设备无法托管”错误</strong></p>
+<p>如果你希望NetworkManager（网络管理器）处理在/etc/network/interfaces中启用的接口，只要在/etc/NetworkManager/NetworkManager.conf中设置managed=true。所以，该文件看起来就像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[main] plugins=ifupdown,keyfile [ifupdown] managed=true</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://s9.51cto.com/wyfs02/M02/27/A3/wKioL1N0Hy-i06pCAAAgIjTDXr8423.jpg" target="_blank" rel="noopener"><img src="http://s9.51cto.com/wyfs02/M02/27/A3/wKioL1N0Hy-i06pCAAAgIjTDXr8423.jpg" alt="img"></a></p>
+<p>请阅读全文：《<a href="http://www.blackmoreops.com/2013/11/25/how-to-fix-wired-network-interface-device-not-managed-error/" target="_blank" rel="noopener">Debian或Kali Linux中解决有线网络接口的”设备无法托管”错误</a>》。</p>
+<p><strong>2. 修复默认的软件库</strong></p>
+<p>最简单的办法就是，编辑/etc/apt/sources.list，去掉每一行或在开头用#注释每一行，并添加下面这几行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leafpad /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>用下面几行，注释或去掉现有的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## Regular repositories deb http://http.kali.org/kali kali main non-free contrib deb http://security.kali.org/kali-security kali/updates main contrib non-free ## Source repositories deb-src http://http.kali.org/kali kali main non-free contrib deb-src http://security.kali.org/kali-security kali/updates main contrib non-free</span><br></pre></td></tr></table></figure>
+
+<p>保存并关闭文件。想了解相关细节和介绍，请参阅《<a href="http://www.blackmoreops.com/2013/10/30/add-official-kali-linux-repositories/" target="_blank" rel="noopener">添加官方的Kali Linux软件库</a>》一文。</p>
+<p><strong>3. 更新、升级和发行版升级</strong></p>
+<p>对你安装的Kali进行清洁、更新、升级和发行版升级等处理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get clean &amp;&amp; apt-get update &amp;&amp; apt-get upgrade -y &amp;&amp; apt-get dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<p><strong>4. 解决PulseAudio警告问题</strong></p>
+<p>我的Kali经常弹出这个警告信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[warn] PulseAudio configured for per-user sessions ... (warning).</span><br></pre></td></tr></table></figure>
+
+<p>Debian变种版本也会在启动过程中弹出类似的警告信息。为了解决这个问题，键入下面这个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leafpad /etc/default/pulseaudio</span><br></pre></td></tr></table></figure>
+
+<p>找到这一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PULSEAUDIO_SYSTEM_START=0</span><br></pre></td></tr></table></figure>
+
+<p>把0换成1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PULSEAUDIO_SYSTEM_START=1</span><br></pre></td></tr></table></figure>
+
+<p>其中，0表示系统模式下不启动PulseAudio，1表示系统模式下启动PulseAudio。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<p>想了解相关细节和介绍，请参阅《<a href="http://www.blackmoreops.com/2013/10/12/fixing-pulseaudio-configured-for-per-user-sessions-warning-in-kali-linux/" target="_blank" rel="noopener">解决Kali Linux中的PulseAudio configured for per-user sessions …（warning）</a>》一文。</p>
+<p><strong>5. 确保启动时发出声音</strong></p>
+<p>遵照下列步骤，即可解决Kali Linux中启动时没有声音的问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install alsa-utils -y</span><br></pre></td></tr></table></figure>
+
+<p>在GNOME桌面（默认是Kali桌面）中：</p>
+<p>鼠标右击小小的音量图标，选择Sound Preferences（声音首选项）。</p>
+<p>此外，你还可以依次进入到Applications（应用程序）&gt; System Tools（系统工具）&gt; Preferences（首选项）&gt; System Settings（系统设置）&gt; Sound（声音），即可调出同样的选项。</p>
+<p>将Output volume（输出音量）滑块切换到ON（打开），类似下面的屏幕截图。这就是你要做的。关闭Sound（声音）窗口。</p>
+<p><a href="http://s2.51cto.com/wyfs02/M01/27/A3/wKiom1N0IObgDue-AACpKMTi3-c960.jpg-wh_600x-s_172056694.jpg" target="_blank" rel="noopener"><img src="http://s2.51cto.com/wyfs02/M01/27/A3/wKiom1N0IObgDue-AACpKMTi3-c960.jpg-wh_600x-s_172056694.jpg" alt="img"></a></p>
+<p>想了解相关细节和介绍，请参阅《<a href="http://www.blackmoreops.com/2014/01/16/fix-sound-mute-kali-linux-boot/" target="_blank" rel="noopener">解决Kali Linux中启动时没有声音这个问题</a>》一文。</p>
+<p><strong>实用工具和软件</strong></p>
+<p><strong>6. 安装Java</strong></p>
+<p>进入到下面这个链接，下载jdk7。截至本文截稿时，jdk版本是jdk-7u45-linux-x64。注意：我使用的是x64，即64位版本。32位版本用户应选择相应的版本。这其实不难！</p>
+<p><a href="http://s6.51cto.com/wyfs02/M00/27/A3/wKiom1N0IRTQukfGAAArMCRuLXE293.jpg" target="_blank" rel="noopener"><img src="http://s6.51cto.com/wyfs02/M00/27/A3/wKiom1N0IRTQukfGAAArMCRuLXE293.jpg" alt="img"></a></p>
+<p>下面是我使用的方法。截至本文截稿时，可用版本是jdk-7u45-linux-x64.tar.gz。下载该文件，并保存在/root目录中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf /root/jdk-7u45-linux-x64.tar.gz mv jdk1.7.0_45 /opt cd /opt/jdk1.7.0_45</span><br></pre></td></tr></table></figure>
+
+<p>这一步将已下载的Java版本登记为替代版本，将其改成作为默认版本来使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --install /usr/bin/java java /opt/jdk1.7.0_45/bin/java 1 update-alternatives --install /usr/bin/javac javac /opt/jdk1.7.0_45/bin/javac 1 update-alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so mozilla-javaplugin.s /opt/jdk1.7.0_45/jre/lib/amd64/libnpjp2.so 1 update-alternatives --set java /opt/jdk1.7.0_45/bin/java update-alternatives --set javac /opt/jdk1.7.0_45/bin/javac update-alternatives --set mozilla-javaplugin.so /opt/jdk1.7.0_45/jre/lib/amd64/libnpjp2.so</span><br></pre></td></tr></table></figure>
+
+<p>参阅《<a href="http://www.blackmoreops.com/2013/10/26/how-to-install-java-jdk-in-kali-linux/" target="_blank" rel="noopener">在Kali Linux中安装Java JDK</a>》一文，即可详细了解逐步操作和测试选项。</p>
+<p><strong>7. 安装Flash</strong></p>
+<p>这件事情相当简单、容易，对大多数人来说应该没有问题：在终端中，键入这个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install flashplugin-nonfree</span><br></pre></td></tr></table></figure>
+
+<p>然后键入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-flashplugin-nonfree - -install</span><br></pre></td></tr></table></figure>
+
+<p>就是这样。你的flash现在应该能够正常工作了。</p>
+<p><a href="http://s6.51cto.com/wyfs02/M01/27/A4/wKioL1N0It3TyKrZAAAaS9wNA8A431.jpg" target="_blank" rel="noopener"><img src="http://s6.51cto.com/wyfs02/M01/27/A4/wKioL1N0It3TyKrZAAAaS9wNA8A431.jpg" alt="img"></a></p>
+<p>参阅《<a href="http://www.blackmoreops.com/2013/10/26/how-to-install-flash-in-kali-linux/" target="_blank" rel="noopener">在Kali Linux中安装Flash</a>》一文，以便了解逐步操作和测试选项。如果有些人使用上述方法安装失败，该文还给出了Flash手动安装步骤。</p>
+<p><strong>8. 安装File Roller（归档管理器）</strong></p>
+<p>Kali Linux缺少一个真正的GUI归档管理器。使用下面这个命令来安装归档管理器（File Roller）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller -y</span><br></pre></td></tr></table></figure>
+
+<p>现在你可以在Applications（应用程序）&gt; Accessories（附件）&gt; Archive Manager（归档管理器）中找到归档管理器。</p>
+<p><strong>9. 添加标准用户</strong></p>
+<p>默认情况下，Kali Linux只有root用户。虽然大多数应用程序需要root访问权，但添加第二个用户总归是个好主意。打开终端，键入下面这个命令，即可创建新用户（把user1换成你想要的用户名称）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -m user1</span><br></pre></td></tr></table></figure>
+
+<p>（注意：-m意味着创建通常是/home/username的主目录）</p>
+<p><a href="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0IvbjIKVZAAA7MAScvTA573.jpg" target="_blank" rel="noopener"><img src="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0IvbjIKVZAAA7MAScvTA573.jpg" alt="img"></a></p>
+<p>现在为该用户设置密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd user1</span><br></pre></td></tr></table></figure>
+
+<p>将所需密码输入两次。添加用户到sudo群组（允许用户进行安装软件、允许打印、使用特权模式等操作）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -a -G sudo user1</span><br></pre></td></tr></table></figure>
+
+<p>（注意：-a意味着附加或添加，-G意味着指定一个群组/多个群组）。将之前创建的用户的默认外壳改成bash：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/bash user1</span><br></pre></td></tr></table></figure>
+
+<p>想了解更多内容，请参阅这篇详细而深入的文章：《如何在Kali Linux中添加/删除用户（标准用户/非root用户）》，参阅<a href="http://www.blackmoreops.com/2013/11/27/how-to-add-remove-user-standard-user-non-root-in-kali-linux/。该文解释了了如何添加用户，而所有的用户目录也已经到位（因而避免了&quot;无法更新.ICEauthority" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/11/27/how-to-add-remove-user-standard-user-non-root-in-kali-linux/。该文解释了了如何添加用户，而所有的用户目录也已经到位（因而避免了&quot;无法更新.ICEauthority</a> var/lib/gdm3/.ICEauthority”或含有.ICEauthority或一般权限的任何错误。）</p>
+<p><strong>10. 添加add-apt-repository</strong></p>
+<p>Debian让用户可以通过一个名为add-apt-repository的应用程序，添加和使用PPA软件库，不过Kali Linux在其默认的程序包列表中并不含有该应用程序。就Kali而言，由于这是个特殊用途的应用程序，已进行了某些改动，以便让它适用于最擅长的地方（渗透测试）。想通过add-apt-repository应用程序启用PPA软件库，遵照下面几个步骤。</p>
+<p>首先安装Python软件属性程序包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python-software-properties</span><br></pre></td></tr></table></figure>
+
+<p>接下来安装apt-file。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install apt-file</span><br></pre></td></tr></table></figure>
+
+<p>更新apt-file。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-file update</span><br></pre></td></tr></table></figure>
+
+<p>这需要一点时间，所以万一你的apt-file更新起来很慢，可能想试试一并解决这个问题。（注意：我的/etc/apt/sources.list文件中有repo.kali.org，而不是http.kali.org。）一旦apt-file更新完毕，你应该能够搜索它了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-file search add-apt-repository</span><br></pre></td></tr></table></figure>
+
+<p>你的输出结果应该看起来类似这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python-software-properties: /usr/bin/add-apt-repository python-software-properties: /usr/share/man/man1/add-apt-repository.1.gz</span><br></pre></td></tr></table></figure>
+
+<p>位于/usr/bin/add-apt-repository的默认add-apt-repository应用程序适用于Debian。所以，如果你使用Kali，它很可能无法工作。我在本文末尾处添加了一个巧妙的解决办法，如果你喜欢的话，可以在VirtualBox上一下。但我发现，我们完全可以模仿Ubuntu Oneiric，让add-apt-repository正常工作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/sbin vi add-apt-repository</span><br></pre></td></tr></table></figure>
+
+<p>添加下列代码，并保存文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash if [ $# -eq 1 ] NM=`uname -a &amp;&amp; date` NAME=`echo $NM | md5sum | cut -f1 -d&quot; &quot;` then ppa_name=`echo &quot;$1&quot; | cut -d&quot;:&quot; -f2 -s` if [ -z &quot;$ppa_name&quot; ] then echo &quot;PPA name not found&quot; echo &quot;Utility to add PPA repositories in your debian machine&quot; echo &quot;$0 ppa:user/ppa-name&quot; else echo &quot;$ppa_name&quot; echo &quot;deb http://ppa.launchpad.net/$ppa_name/ubuntu oneiric main&quot; &gt;&gt; /etc/apt/sources.list apt-get update &gt;&gt; /dev/null 2&gt; /tmp/$&#123;NAME&#125;_apt_add_key.txt key=`cat /tmp/$&#123;NAME&#125;_apt_add_key.txt | cut -d&quot;:&quot; -f6 | cut -d&quot; &quot; -f3` apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $key rm -rf /tmp/$&#123;NAME&#125;_apt_add_key.txt fi else echo &quot;Utility to add PPA repositories in your debian machine&quot; echo &quot;$0 ppa:user/ppa-name&quot; fi</span><br></pre></td></tr></table></figure>
+
+<p>注意：在echo “deb <a href="http://ppa.launchpad.net/$ppa_name/ubuntu" target="_blank" rel="noopener">http://ppa.launchpad.net/$ppa_name/ubuntu</a> oneiric main” &gt;&gt; /etc/apt/sources.list这一行中，我使用了Oneiric。你可以根据自己的选择，试着使用Lucid、Raring或Saucy。现在，使用chmod和chown这两个命令，对文件进行相应的操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/sbin/add-apt-repository chown root:root /usr/sbin/add-apt-repository</span><br></pre></td></tr></table></figure>
+
+<p>由于我们已添加了正确的代码，我们就可以使用add-apt-repository，添加PPA软件库。我试着输入下面这两个命令，在Kali Linux中添加主题和自定义图标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/sbin/add-apt-repository ppa:noobslab/themes /usr/sbin/add-apt-repository ppa:alecive/antigone</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://s7.51cto.com/wyfs02/M00/27/A3/wKiom1N0I0DjXhX2AAFne0roxq4680.jpg-wh_600x-s_4088219889.jpg" target="_blank" rel="noopener"><img src="http://s7.51cto.com/wyfs02/M00/27/A3/wKiom1N0I0DjXhX2AAFne0roxq4680.jpg-wh_600x-s_4088219889.jpg" alt="img"></a></p>
+<p>我删除了本文中的所有屏幕截图，但如果你想看个清楚，了解具体是如何工作的，建议你参阅《<a href="http://www.blackmoreops.com/2014/02/21/kali-linux-add-ppa-repository-add-apt-repository/" target="_blank" rel="noopener">在Kali Linux中添加PPA软件库add-apt-repository</a>》一文，了解更多细节。</p>
+<p><strong>11. 安装Tor</strong></p>
+<p>Tor是自由软件，也是一种开放网络，可以帮助你防御流量分析。流量分析是一种网络监视行为，会危及个人自由和隐私、机密性的商业活动和关系以及国家安全。该指南为你详细介绍了在Kali Linux中安装Tor的步骤。Tor保护你的方法是，通过由全球广大志愿者运营的一个分布式中转网络，传递你的通信内容：它可以防止有人监视你的互联网连接、进而了解你访问哪些网站，它还可以防止你访问的网站了解你的实际位址。</p>
+<p><a href="http://s9.51cto.com/wyfs02/M01/27/A4/wKiom1N0I2GBapXSAACLWDMY0dw505.jpg-wh_600x-s_4269129613.jpg" target="_blank" rel="noopener"><img src="http://s9.51cto.com/wyfs02/M01/27/A4/wKiom1N0I2GBapXSAACLWDMY0dw505.jpg-wh_600x-s_4269129613.jpg" alt="img"></a></p>
+<p>Tor在Kali软件库中就用；想直接从软件库安装它，只要打开终端，键入这个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install tor</span><br></pre></td></tr></table></figure>
+
+<p>从命令行启用Tor服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service tor start</span><br></pre></td></tr></table></figure>
+
+<p>使用proxychains命令和Tor，实现安全浏览：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains iceweasel</span><br></pre></td></tr></table></figure>
+
+<p>为了在本文中确保行文简单，我只显示了使用Tor的一方面。你可以在《在Kali Linux中安装Tor》一文中详细阅读完整细节，详见<a href="http://www.blackmoreops.com/2013/12/16/installing-tor-kali-linux/。" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/12/16/installing-tor-kali-linux/。</a></p>
+<p><strong>12. 安装Filezilla FTP客户端</strong></p>
+<p>要是缺少功能完备的FTP客户端，任何Linux安装都谈不上是完整的。Filezilla是最好的FTP客户端，所以使用下面这个命令，安装Filezilla：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install filezilla filezilla-common -y</span><br></pre></td></tr></table></figure>
+
+<p><strong>13. 安装HTOP和NetHogs</strong></p>
+<p>HTOP是个特别的工具，显示了运行中的进程和所使用的内存，包括更多的详细信息。（你也可以使用top命令，但HTOP完全有用得多。）NetHogs也很有用，它按接口显示了应用程序所用的流量。使用下面这个命令，安装这两个工具：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install htop nethogs -y</span><br></pre></td></tr></table></figure>
+
+<p>你现在可以使用下面几个命令来运行它们了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htop nethogs eth0 nethogs wlan0</span><br></pre></td></tr></table></figure>
+
+<p>你会喜欢使用这些小巧工具的，这点我几乎可以肯定。</p>
+<p><strong>14. 为显卡安装专有的驱动程序</strong></p>
+<p>你可能需要安装专有的驱动程序，以发掘更多的功能特性，这取决于你使用哪种显卡（ADM还是英伟达）。我写过一篇详细的文章，介绍了<a href="http://www.blackmoreops.com/2014/02/11/install-amd-ati-proprietary-driver-fglrx-in-kali-linux-1-0-6-running-kernel-version-3-12-6/" target="_blank" rel="noopener">如何在Kali Linux中安装AMD ATI专有驱动程序（fglrx）</a>。</p>
+<p><a href="http://s4.51cto.com/wyfs02/M00/27/A4/wKioL1N0I1KQufG6AACOljq0ol4768.jpg" target="_blank" rel="noopener"><img src="http://s4.51cto.com/wyfs02/M00/27/A4/wKioL1N0I1KQufG6AACOljq0ol4768.jpg" alt="img"></a></p>
+<p>英伟达用户完全可以遵照安装英伟达驱动程序的<a href="http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux" target="_blank" rel="noopener">官方说明文档</a>。要是官方说明文档不管用，或者你已无计可施，不妨关注我写过的这另一篇文章：《<a href="http://www.blackmoreops.com/2013/10/20/how-to-install-nvidia-kernel-module-cuda-and-pyrit/" target="_blank" rel="noopener">如何手动安装英伟达二进制驱动程序</a>》。</p>
+<p><a href="http://s5.51cto.com/wyfs02/M02/27/A4/wKiom1N0I5-QfEBhAABIf_rComI556.jpg" target="_blank" rel="noopener"><img src="http://s5.51cto.com/wyfs02/M02/27/A4/wKiom1N0I5-QfEBhAABIf_rComI556.jpg" alt="img"></a></p>
+<p><strong>15. 安装Recordmydesktop和Reminna远程桌面客户端</strong></p>
+<p>Recordmydesktop让你能够录制在Kali Linux中的活动，并制作视频。Remmina类似Windows远程桌面客户端。两者都非常实用。可以使用下面这个命令安装它们：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install gtk-recordmydesktop recordmydesktop remmina -y</span><br></pre></td></tr></table></figure>
+
+<p><strong>16. 安装GDebi程序包管理器</strong></p>
+<p>dpkg是一个功能强大的工具，但它并不自动安装依赖项。为此，我们需要某种程序包安装工具，以便在安装.deb程序包的同时，可以去获取所有必要的依赖项。眼下最出色的程序包安装工具非gdebi莫属。使用下面这个命令来安装它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install gdebi -y</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://s7.51cto.com/wyfs02/M01/27/A4/wKioL1N0I47SrBAOAAEB_M5IxdQ529.jpg-wh_600x-s_3985124782.jpg" target="_blank" rel="noopener"><img src="http://s7.51cto.com/wyfs02/M01/27/A4/wKioL1N0I47SrBAOAAEB_M5IxdQ529.jpg-wh_600x-s_3985124782.jpg" alt="img"></a></p>
+<p>改进和辅助功能</p>
+<p><strong>17. 安装主题</strong></p>
+<p>安装主题、美化桌面是个好主意。Kali的默认桌面单调而乏味。你可以使用两种不同的方法来更改主题。</p>
+<ul>
+<li>手动安装主题</li>
+<li>通过PPA软件库安装主题</li>
+</ul>
+<p><a href="http://www.blackmoreops.com/2014/02/27/change-install-theme-kali-linux-gtk-3-themes/" target="_blank" rel="noopener">请阅读此处的细节</a>，即可了解如何在Kali Linux中更改或安装GTK3主题。</p>
+<p><a href="http://s5.51cto.com/wyfs02/M00/27/A4/wKiom1N0I9Xi8fM0AACYvIEHZfo419.jpg" target="_blank" rel="noopener"><img src="http://s5.51cto.com/wyfs02/M00/27/A4/wKiom1N0I9Xi8fM0AACYvIEHZfo419.jpg" alt="img"></a></p>
+<p><strong>18. 安装一种新的桌面环境（我青睐XFCE）</strong></p>
+<p>我青睐XFCE桌面，但你可以试着在Kali Linux中安装/删除不同的桌面环境或窗口管理器。根据你的需要，选择下列链接：</p>
+<p>1.《如何在Kali Linux中安装/删除XFCE桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-xfce-desktop-environment-in-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-xfce-desktop-environment-in-kali-linux/</a>。</p>
+<p>\2. 《如何在Kali Linux中安装/删除不同的KDE桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-different-kde-desktop-environments-in-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-different-kde-desktop-environments-in-kali-linux/</a>。</p>
+<p>\3. 《如何在Kali Linux中安装/删除LXDE桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-lxde-desktop-environment-in-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-lxde-desktop-environment-in-kali-linux/</a>。</p>
+<p>\4. 《如何在Kali Linux中安装/删除GNOME桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-gnome-desktop-environment-on-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-gnome-desktop-environment-on-kali-linux/</a>。</p>
+<p>\5. 《如何在Kali Linux中安装/删除Cinnamon桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-cinnamon-desktop-environment-in-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-cinnamon-desktop-environment-in-kali-linux/</a>。</p>
+<p>\6. 《如何在Kali Linux中安装/删除MATE桌面环境？》，参阅<a href="http://www.blackmoreops.com/2013/10/29/how-to-install-remove-mate-desktop-environment-in-kali-linux/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/29/how-to-install-remove-mate-desktop-environment-in-kali-linux/</a>。</p>
+<p>最后，遵照这些操作步骤，永久性地<a href="http://www.blackmoreops.com/2013/10/29/permanently-switch-desktop-environments/" target="_blank" rel="noopener">更换桌面环境</a>（也就是启动进入到XFCE，而不是GNOME）。</p>
+<p><a href="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0I8Gjr6zsAACQejk0gHM378.jpg-wh_600x-s_1867495804.jpg" target="_blank" rel="noopener"><img src="http://s6.51cto.com/wyfs02/M02/27/A4/wKioL1N0I8Gjr6zsAACQejk0gHM378.jpg-wh_600x-s_1867495804.jpg" alt="img"></a></p>
+<p><strong>19. 启用自动登录用户</strong></p>
+<p>这是个简单的变更。只要打开并编辑名为/etc/gdm3/daemon.conf的文件，假设你在使用GNOME显示管理器（gmd3）作为主要的显示管理器。你可能想要另外也能试一下其他桌面。下面这个链接介绍了《如何在Kali Linux中添加/删除不同的桌面管理器》，详见<a href="http://www.blackmoreops.com/2013/10/11/how-to-installremove-different-desktop-environment-or-window-manager-in-kali-linux-1-x/。" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/11/how-to-installremove-different-desktop-environment-or-window-manager-in-kali-linux-1-x/。</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# leafpad /etc/gdm3/daemon.conf</span><br></pre></td></tr></table></figure>
+
+<p>在daemon即守护程序部分，将用于自动登录的那两行代码取消注释。它最后应该看起来像这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[daemon] # Enabling automatic login AutomaticLoginEnable = true AutomaticLogin = root</span><br></pre></td></tr></table></figure>
+
+<p>就是这样，容易得很。要是你想知道如何使用不同于root用户的用户，方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[daemon] # Enabling automatic login AutomaticLoginEnable = true AutomaticLogin = myanotheruser</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://s1.51cto.com/wyfs02/M01/27/A4/wKiom1N0JBDBe1VvAADDRIbD5CU947.jpg-wh_600x-s_3814205756.jpg" target="_blank" rel="noopener"><img src="http://s1.51cto.com/wyfs02/M01/27/A4/wKiom1N0JBDBe1VvAADDRIbD5CU947.jpg-wh_600x-s_3814205756.jpg" alt="img"></a></p>
+<p>最后但并非最不重要的是，重启系统，核实一下是否管用。（这会管用，因为它是Linux，Kali很出色。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<p>你可能想要采取进一步行动，或者如果你是KDE用户，那么这里的操作步骤介绍了如何在Kali Linux中，系统启动时，让root用户自动登录（GNOME和KDE），详见<a href="http://www.blackmoreops.com/2013/12/19/auto-login-root-user-system-start-kali-linux-gnome-kde/。该文还介绍了如何让不同的非root用户实现自动登录，相当方便。" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/12/19/auto-login-root-user-system-start-kali-linux-gnome-kde/。该文还介绍了如何让不同的非root用户实现自动登录，相当方便。</a></p>
+<p>下面这部分解释了如何更充分地发挥你系统的功能，尤其是发挥显卡的功能。</p>
+<p><strong>20. 发掘GPU处理的能力</strong></p>
+<p>最后但并非最不重要的是，在你试图破解密码时，GPU处理速度要快得多。你可以选择下面介绍的几种方法，具体取决于所使用的显卡：</p>
+<p><em>a. AMD显卡</em></p>
+<p>《在Kali Linux 1.x中安装AMD ATI驱动程序（fglrx）》，参阅：<a href="http://www.blackmoreops.com/2013/10/22/install-amd-ati-driver-fglrx-in-kali-linux-1-x/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/22/install-amd-ati-driver-fglrx-in-kali-linux-1-x/</a>。</p>
+<p>然后参阅其余指南文章：</p>
+<ul>
+<li>《<a href="http://www.blackmoreops.com/2013/11/22/install-amd-app-sdk-kali-linux/" target="_blank" rel="noopener">如何在Kali Linux中安装AMD APP SDK？</a>》</li>
+<li>《<a href="http://www.blackmoreops.com/2013/11/22/install-pyrit-in-kali-linux/" target="_blank" rel="noopener">如何在Kali Linux中安装Pyrit？</a>》</li>
+<li>《<a href="http://www.blackmoreops.com/2013/11/22/install-cal-kali-linux/" target="_blank" rel="noopener">如何在Kali Linux中安装CAL++？</a>》</li>
+</ul>
+<p><em>b. 英伟达显卡</em></p>
+<p>英伟达显卡用户完全可以参阅安装英伟达驱动程序的<a href="http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux" target="_blank" rel="noopener">官方说明文档</a>。如果官方说明文档不管用或者你已无计可施，不妨参阅我写过的另一篇文章，介绍如何手动安装英伟达显卡二进制驱动程序。</p>
+<p>《如何在Kali Linux中安装英伟达内核模块Cuda和Pyrit？》，参阅<a href="http://www.blackmoreops.com/2013/10/20/how-to-install-nvidia-kernel-module-cuda-and-pyrit/" target="_blank" rel="noopener">http://www.blackmoreops.com/2013/10/20/how-to-install-nvidia-kernel-module-cuda-and-pyrit/</a>。</p>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat-reward-img.jpg" alt="静听、唯美殇 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay-reward-img.jpg" alt="静听、唯美殇 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"><i class="fa fa-tag"></i> 技术</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/ck1lhstyl000x70433k54od98/" rel="next" title="jQuery ajax方法">
+                <i class="fa fa-chevron-left"></i> jQuery ajax方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/ck1lhstwu00087043dt7f0c3c/" rel="prev" title="2016年BAT公司常见的Web前端面试题整理">
+                2016年BAT公司常见的Web前端面试题整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="静听、唯美殇">
+            
+              <p class="site-author-name" itemprop="name">静听、唯美殇</p>
+              <div class="site-description motion-element" itemprop="description">for love</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+  <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=863481092&auto=1&height=66"></iframe>
+           </div>
+          
+            <div class="feed-link motion-element">
+              <a href="http://www.zhihu.com/rss" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/copyer1998" title="GitHub &rarr; https://github.com/copyer1998" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/yanni31316" title="Weibo &rarr; http://weibo.com/yanni31316" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yzqdev@outlook.com" title="E-Mail &rarr; mailto:yzqdev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://zhihu.com" title="zhihu &rarr; https://zhihu.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-battery-full"></i>zhihu</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3cplus.com/" title="https://www.w3cplus.com/" rel="noopener" target="_blank">w3cplus</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="https://segmentfault.com/" rel="noopener" target="_blank">segmentfault</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.oschina.net/" title="http://www.oschina.net/" rel="noopener" target="_blank">开源中国</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.csdn.net/" title="https://www.csdn.net/" rel="noopener" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/yanni-87/activities" title="https://www.zhihu.com/people/yanni-87/activities" rel="noopener" target="_blank">友链出租</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank"> </a>&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">静听、唯美殇</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">371k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">11:15</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery_lazyload@1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.0"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'S24KfGBIM1Deqy65toUIUymq-gzGzoHsz',
+    appKey: 'EIUyk8fOu1seYDQGNYXyyf0n',
+    placeholder: '✍如果您希望得到作者的回复，请填写上方E-mail地址以便回复',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+  //新增以下代码即可，可以移除.info下所有子节点。
+var infoEle = document.querySelector('#comments .info');
+if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+  infoEle.childNodes.forEach(function(item) {
+    item.parentNode.removeChild(item);
+  });
+}
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('manual', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/live2d-widget","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+</html>

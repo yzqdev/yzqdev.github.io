@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="cloudsimCloudSim simulation toolkit works on the basis of porgramatic models that are designed by carefully studying the behaviors of real world cloud system components. These are some of the models o">
+<meta name="keywords" content="电脑,编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cloudsim 配置">
+<meta property="og:url" content="https://yzqdev.github.io/2017/ck1lhstyg000v70435jlyk3a8/index.html">
+<meta property="og:site_name" content="七月飞雪">
+<meta property="og:description" content="cloudsimCloudSim simulation toolkit works on the basis of porgramatic models that are designed by carefully studying the behaviors of real world cloud system components. These are some of the models o">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/2SDU2Ln.png">
+<meta property="og:image" content="https://i.imgur.com/7Ij6vKK.png">
+<meta property="og:image" content="https://i.imgur.com/Te6s3kV.png">
+<meta property="og:image" content="https://i.imgur.com/B9Gt6XT.png">
+<meta property="og:image" content="https://i.imgur.com/BLCRhbw.png">
+<meta property="og:image" content="https://i.imgur.com/G2gfEse.png">
+<meta property="og:image" content="https://i.imgur.com/96wF79f.png">
+<meta property="og:image" content="https://i.imgur.com/6jCw12e.png">
+<meta property="og:image" content="https://i.imgur.com/r46XcoU.png">
+<meta property="og:image" content="https://i.imgur.com/Nvtw5dI.png">
+<meta property="og:image" content="https://i.imgur.com/1TVhlVE.png">
+<meta property="og:image" content="https://i.imgur.com/9rOm9vw.png">
+<meta property="og:updated_time" content="2019-04-06T05:27:58.122Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cloudsim 配置">
+<meta name="twitter:description" content="cloudsimCloudSim simulation toolkit works on the basis of porgramatic models that are designed by carefully studying the behaviors of real world cloud system components. These are some of the models o">
+<meta name="twitter:image" content="https://i.imgur.com/2SDU2Ln.png">
+
+
+
+  <link rel="alternate" href="http://www.zhihu.com/rss" title="七月飞雪" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://yzqdev.github.io/2017/ck1lhstyg000v70435jlyk3a8/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>cloudsim 配置 | 七月飞雪</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">七月飞雪</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">YZQ BLOG</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">33</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/yzqdev/yzqdev.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yzqdev.github.io/2017/ck1lhstyg000v70435jlyk3a8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="静听、唯美殇">
+      <meta itemprop="description" content="for love">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="七月飞雪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">cloudsim 配置
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-29 12:17:00" itemprop="dateCreated datePublished" datetime="2017-12-29T12:17:00+08:00">2017-12-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-06 13:27:58" itemprop="dateModified" datetime="2019-04-06T13:27:58+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/ck1lhstyg000v70435jlyk3a8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/ck1lhstyg000v70435jlyk3a8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2017/ck1lhstyg000v70435jlyk3a8/" class="leancloud_visitors" data-flag-title="cloudsim 配置">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">82k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2:28</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="cloudsim"><a href="#cloudsim" class="headerlink" title="cloudsim"></a>cloudsim</h2><p>CloudSim simulation toolkit works on the basis of porgramatic models that are designed by carefully studying the behaviors of real world cloud system components. These are some of the models of CloudSim: Datacenter, Datacenterbroker, Host, Vm, VmScheduling, VMAllocation, Storage etc, few of these are abstract models and few are defined to its fullest. The abstract models are defined for enabling the extension of these models for user defined simulation scenarios.</p>
+<h2 id="配置-cloudsim"><a href="#配置-cloudsim" class="headerlink" title="配置 cloudsim"></a>配置 cloudsim</h2><a id="more"></a>
+<h3 id="配置-cloudsim-Eclipse"><a href="#配置-cloudsim-Eclipse" class="headerlink" title="配置 cloudsim(Eclipse)"></a>配置 cloudsim(Eclipse)</h3><ol>
+<li><p>首先要下载 cloudsim 包,下载地址在这里:<a href="https://github.com/Cloudslab/cloudsim" target="_blank" rel="noopener">https://github.com/Cloudslab/cloudsim</a></p>
+<p><img src="https://i.imgur.com/2SDU2Ln.png" alt><br><img src="https://i.imgur.com/7Ij6vKK.png" alt><br>下载后解压,把解压后的东西放到 eclipse 的 workspaces,方便使用,</p>
+</li>
+</ol>
+<ol start="2">
+<li>用 eclipse 打开项目,在菜单栏上 <code>File&gt;import</code><br>导入为一个 maven 项目,它会自动下载 pom.xml 里面的包,大家一般的错误就是缺少相应的依赖包:<br><img src="https://i.imgur.com/Te6s3kV.png" alt><br><img src="https://i.imgur.com/B9Gt6XT.png" alt><br>导入后就出现了项目,等下面的进度条走完就好了,<br><img src="https://i.imgur.com/BLCRhbw.png" alt><br><img src="https://i.imgur.com/G2gfEse.png" alt></li>
+</ol>
+<p>然后打开实例,直接运行即可</p>
+<p style="color:red;font-size:50;">如果导入失败,可以尝试换一个工作区重新导入!</p>
+
+<p><img src="https://i.imgur.com/96wF79f.png" alt><br><code>console</code> 里面的就是输出结果</p>
+<h3 id="配置-cloudsim-idea"><a href="#配置-cloudsim-idea" class="headerlink" title="配置 cloudsim(idea)"></a>配置 cloudsim(idea)</h3><blockquote>
+<p>这个比较好配置,直接导入即可</p>
+</blockquote>
+<ol>
+<li>点击 open,打开我们的 cloudsim 文件夹即可<br><img src="https://i.imgur.com/6jCw12e.png" alt></li>
+<li>打开后同样需要添加依赖,import changes 就好了<br><img src="https://i.imgur.com/r46XcoU.png" alt><br>添加好后,他已经是一个完整的项目了,可以直接运行<br><img src="https://i.imgur.com/Nvtw5dI.png" alt></li>
+</ol>
+<h2 id="依据-CloudSim-源代码介绍几个核心类："><a href="#依据-CloudSim-源代码介绍几个核心类：" class="headerlink" title="依据 CloudSim 源代码介绍几个核心类："></a>依据 CloudSim 源代码介绍几个核心类：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(1)Cloudlet类：构建云环境下的任务。</span><br><span class="line">(2)DataCenter类：数据中心，提供虚拟化的网格资源，处理虚拟机信息的查询，包含虚拟机对资源的分配策略，云计算采用VMProvisioner处理虚拟机。</span><br><span class="line">(3)DataCenterBroker类：隐藏了虚拟机的管理，如创建、任务提交、虚拟机的销毁等。</span><br><span class="line">(4)Host类：扩展了机器对虚拟机除处理单元(PE)之外的参数分配策略，如带宽、存储空间、内存等，一台Host可对应多台虚拟机。</span><br><span class="line">(5)VirtualMachine类：虚拟机类，运行在Host上，与其它虚拟机共享资源，每台虚拟机由一个拥有者所有，可提交任务，并由VMScheduler类定制该虚拟机的调度策略。</span><br><span class="line">(6)VMScheduler类：虚拟机的调度策略，用来管理执行任务，实现了任务接口。</span><br><span class="line">(7)VMCharacteristics类：提供虚拟机描述。</span><br><span class="line">(8)VMMAllocationPolicy类：虚拟机监视器策略类，描述同一Host上的多台虚拟机共享资源的策略。</span><br><span class="line">(9)VMProvisioner类：实现数据中心的主机到虚拟机的映射。</span><br></pre></td></tr></table></figure>
+
+<p>1)<code>CloudInformationService.java（org.cloudbus.cloudsim.core）</code><br>   Cloudsim 中最重要的类之一，它在 CloudSim 的仿真过程中保存资源列表（在现实生活中作为数据库）。这个类实现了 processEvent（SimEvent）方法，在模拟过程中，它处理七个离散类别的事件。如果仔细分析所有基本示例，将调用 CloudSim.Init（）方法，该方法将初始化 CloudInformationService 类的实例。这个类实例提供的基本服务将注册新的资源，索引和它们的发现。</p>
+<p>2) <code>DataCenter.java（org.cloudbus.cloudsim）</code>该类通过持有主机，处理元素（Pe）和存储为列表的实例来模仿真实数据中心的基础架构功能。同时，为了方便您的模型和地理位置的可用性，它将初始化 DataCenterCharacteristics。这个类还实现了自己的 processEvent（SimEvent）方法，在模拟过程中，它处理了二十七个默认离散事件类别，如资源信息收集，虚拟机生命周期，云端提交状态等。</p>
+<p>3) <code>DataCenterBroker.java（org.cloudbus.cloudsim）</code><br>4) <code>CloudSimShutdown.java（org.cloudbus.cloudsim.core）</code><br>5) <code>NetDatacenterBroker.java（org.cloudbus.cloudsim.network.datacenter）</code><br>6) <code>Switch.java（org.cloudbus.cloudsim.network.datacenter）</code></p>
+<p>在这里，在CloudSim文件夹中，有以下文件夹：</p>
+<ol>
+<li><strong>例子</strong>：这个文件夹还包含了各种基于场景的用例，这个基本上是一个非常简单的实现来演示如何使用这个模拟引擎。这些示例包含各种用例，从基于虚拟机的数据中心开始，模仿使用功耗感知模型有效处理其操作的真正数据中心的实际配置。所有这些例子都被归类为以下包/名称空间：<ol>
+<li><strong>org.cloudbus.cloudsim.examples：</strong>与生成基础级别基础结构实现有关的基本示例。</li>
+<li><strong>org.cloudbus.cloudsim.examples.network：</strong>包含与基于拓扑的数据中心模拟相关的各种使用案例。</li>
+<li><strong>org.cloudbus.cloudsim.examples.network.datacenter：</strong>这个包支持<strong>“org.cloudbus.cloudsim.examples.network”</strong>这个软件包，并附加了一些模仿网络支持云系统数据中心的类。</li>
+<li><strong>org.cloudbus.cloudsim.examples.power：</strong>包含与功耗感知用例相关的实现，是cloudsim功耗感知模型实现最有趣的实现之一。</li>
+<li><strong>org.cloudbus.cloudsim.examples.power.random：</strong>包含用于支持数据中心中的绿色计算概念的各种Power模型的实现。</li>
+<li><strong>org.cloudbus.cloudsim.examples.power.planetlab：</strong>这也包含类似的功率模型实现，但是用来测试仿真的数据是从planetlab中获得的。这意味着这套示例可以处理真实的数据。</li>
+<li><strong>workload.planetlab：</strong>这个软件包包含了来自地球实验室的所有数据，它是一个数据明智的数据。这进一步被’org.cloudbus.cloudsim.examples.power.planetlab’包中定义的例子所消耗。</li>
+</ol>
+</li>
+<li><strong>来源</strong>：该文件夹包含所有的模型类，支持cloudsim的模拟过程。这些模型根据其属性和行为进一步在各种包/名称空间中进行结构化。以下是可用的软件包：<ol>
+<li><strong>org.cloudbus.cloudsim：</strong>包含与CPU，RAM，网络带宽等相关的DataCenter，Broker，Host，CPU，存储，资源，分配策略和利用模型相关的类的集合。</li>
+<li><strong>org.cloudbus.cloudsim.core：</strong>包含云模拟引擎的支柱类，包括事件调度执行引擎，实体库定义，云信息服务等。</li>
+<li><strong>org.cloudbus.cloudsim.core.predicates：</strong>这些类用于启用事件比较以及执行相应的事件。</li>
+<li><strong>org.cloudbus.cloudsim.distributions：</strong>包含模拟过程中使用的各种标准数学分布的实现。</li>
+<li><strong>org.cloudbus.cloudsim.lists：</strong>包含在主机，虚拟机，虚拟机等列表上执行的操作的实现。</li>
+<li><strong>org.cloudbus.cloudsim.network：</strong>包含几个路由算法的实现，如：FloydWarshall，BRITE等</li>
+<li><strong>org.cloudbus.cloudsim.network.datacenter：</strong>包含基于基于网络的数据中心模拟的与模型有关的类的实现。</li>
+<li><strong>org.cloudbus.cloudsim.power：</strong>包含与功耗感知模型相关的数据中心，代理，主机，虚拟机和分配策略的扩展实现</li>
+<li><strong>org.cloudbus.cloudsim.power.lists：</strong>仅包含启用了功耗感知数据中心模型的虚拟机的实现</li>
+<li><strong>org.cloudbus.cloudsim.power.models：</strong>包含市场上可用的各种CPU模型的实现，并用于各种现实生活中的数据中心提供商。</li>
+<li><strong>org.cloudbus.cloudsim.provisioners：</strong>包含CPU，RAM，带宽的供应程序的实施。</li>
+<li><strong>org.cloudbus.cloudsim.util：</strong>包含在仿真过程中用于某些计算目的的一组类。</li>
+</ol>
+</li>
+</ol>
+<h2 id="CloudSimExample1-包含以下属性的声明和定义："><a href="#CloudSimExample1-包含以下属性的声明和定义：" class="headerlink" title="CloudSimExample1 包含以下属性的声明和定义："></a>CloudSimExample1 包含以下属性的声明和定义：</h2><ol>
+<li><p><strong>CloudletList</strong>：<br>List <cloudlet>类型的静态变量。通过仿真过程它将包含云类的所有实例的列表。该列表被提交给 DataCenterBroker 的实例，以便分配给特定的 VM 用于执行目的。</cloudlet></p>
+</li>
+<li><p><strong>vmlist</strong>：一个 List <vm>类型的静态变量，在模拟过程中，它将包含 Vm 类的所有实例的列表。该列表还将被提交给 DataCenterBroker 的实例以分配用于执行的云实例。云块到 Vm 的映射可以是随机的或特定的。这取决于用例实现。</vm></p>
+</li>
+<li><p><strong>createBroker（）：</strong><br>此方法将创建并返回 DataCenterBroker 的实例。这个方法在 main 方法里面调用也是一个静态的方法。</p>
+</li>
+<li><p><strong>createDatacenter(String):</strong><br>该方法包含定义 DataCenter 配置的实现，该配置将用于在仿真过程中处理云的执行。此方法将数据中心名称作为名称，仅用于识别目的。在这个方法中，只有 DataCenterCharateristics 被定义了哪个实例实例化主机列表以及处理元素列表。这些列表以及存储列表，分配策略和 DataCenterCharacteristics 的实例将创建 DataCenter 实例并返回到主方法调用。</p>
+</li>
+<li><p><strong>printCloudletList(List<cloudlet>):</cloudlet></strong><br>一旦模拟结束，此方法用于打印模拟结果。</p>
+</li>
+<li><p><strong>main(string args[])</strong>：这个方法是一旦你点击运行按钮就被调用的第一个方法。此方法包含执行下面提到的所有步骤，并按顺序执行。此方法根据执行中的步骤在需要的时候向特定的方法发送一个调用。以下步骤解释了每个步骤及其代码：</p>
+</li>
+</ol>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步:"></a><strong>第一步:</strong></h3><p>Cloudsim 仿真将被初始化以进行仿真，并且这个仿真需要下面的信息来启动：</p>
+<ul>
+<li>number of user,</li>
+<li>calendar instance </li>
+<li>traceflag value.</li>
+</ul>
+<p>所有这些参数都需要初始化 Cloudsim 仿真过程，CloudSim.init()方法初始化并发送一个调用来创建一个 CloudInfromationService 实例（创建第一个实体）。下面的代码用于此：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num_user = <span class="number">1</span>; <span class="comment">// number of cloud users defined statically</span></span><br><span class="line">Calendar calendar = Calendar.getInstance();</span><br><span class="line"><span class="keyword">boolean</span> trace_flag = <span class="keyword">false</span>; <span class="comment">// mean trace events</span></span><br><span class="line">CloudSim.init(num_user, calendar, trace_flag);<span class="comment">//初始化CloudSim工具包，它应该在创建任何实体之前调用</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a><strong>第二步</strong></h3><p>一个数据中心实例将被创建，这是通过一个单独的<code>CreateDataCenter</code>  完成的，这个实例创建了处理元素，主机，存储，成本和数据中心特性的实例。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Datacenter datacenter0 = createDatacenter(<span class="string">"Datacenter_0"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这反过来将调用发送到 <code>createDatacenter（）</code>方法的以下定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Datacenter <span class="title">createDatacenter</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.创建列表用于储存机器，简称主机列表</span></span><br><span class="line">    List&lt;Host&gt; hostList = <span class="keyword">new</span> ArrayList&lt;Host&gt;();</span><br><span class="line">    <span class="comment">//   2. 创建主机包含的PE或者CPU处理器列表</span></span><br><span class="line">    List&lt;Pe&gt; peList = <span class="keyword">new</span> ArrayList&lt;Pe&gt;();</span><br><span class="line">    <span class="keyword">int</span> mips = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 创建处理器，并添加到Pe列表中</span></span><br><span class="line">    peList.add(<span class="keyword">new</span> Pe(<span class="number">0</span>, <span class="keyword">new</span> PeProvisionerSimple(mips)));</span><br><span class="line">    <span class="keyword">int</span> hostId = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ram = <span class="number">2048</span>; <span class="comment">// </span></span><br><span class="line">    <span class="keyword">long</span> storage = <span class="number">1000000</span>; <span class="comment">//主机容量</span></span><br><span class="line">    <span class="keyword">int</span> bw = <span class="number">10000</span>;</span><br><span class="line">    <span class="comment">// 4. 创建主机，并将其添加至主机列表</span></span><br><span class="line">    hostList.add(</span><br><span class="line">        <span class="keyword">new</span> Host(hostId,</span><br><span class="line">                <span class="keyword">new</span> RamProvisionerSimple(ram),<span class="comment">//内存提供者，为虚拟机提供内存</span></span><br><span class="line">                <span class="keyword">new</span> BwProvisionerSimple(bw),<span class="comment">//带宽提供者</span></span><br><span class="line">                storage, peList,</span><br><span class="line">                <span class="keyword">new</span> VmSchedulerTimeShared(peList)<span class="comment">//时间共享的VM调度 ));</span></span><br><span class="line"></span><br><span class="line">        String arch = <span class="string">"x86"</span>; <span class="comment">// system architecture</span></span><br><span class="line">    String os = <span class="string">"Linux"</span>; <span class="comment">// operating system</span></span><br><span class="line">    String vmm = <span class="string">"Xen"</span>;</span><br><span class="line">    <span class="keyword">double</span> time_zone = <span class="number">10.0</span>; <span class="comment">// time zone this resource located</span></span><br><span class="line">    <span class="keyword">double</span> cost = <span class="number">3.0</span>; <span class="comment">// the cost of using processing in this resource</span></span><br><span class="line">    <span class="keyword">double</span> costPerMem = <span class="number">0.05</span>; <span class="comment">// the cost of using memory in this resource</span></span><br><span class="line">    <span class="keyword">double</span> costPerStorage = <span class="number">0.001</span>; <span class="comment">// the cost of using storage in this resource</span></span><br><span class="line">    <span class="keyword">double</span> costPerBw = <span class="number">0.0</span>; <span class="comment">// the cost of using bw in this resource</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// we are not adding SAN devices by no</span></span><br><span class="line">    LinkedList&lt;Storage&gt; storageList = <span class="keyword">new</span> LinkedList&lt;Storage&gt;();</span><br><span class="line"><span class="comment">// 创建数据中心特征，它表示了数据中心的资源的静态属性，比如：体系结构，操作系统，主机列表，分配策略，时间或空间共享，时区，价格</span></span><br><span class="line">    DatacenterCharacteristics characteristics =</span><br><span class="line">    <span class="keyword">new</span> DatacenterCharacteristics(arch, os, vmm,hostList,</span><br><span class="line">        time_zone,cost,costPerMem,costPerStorage, costPerBw);</span><br><span class="line"><span class="comment">// .最后，创建Power-aware数据中心</span></span><br><span class="line">    Datacenter datacenter = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        datacenter = <span class="keyword">new</span> Datacenter(name, characteristics,</span><br><span class="line">            <span class="keyword">new</span>  VmAllocationPolicySimple(hostList), storageList, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> datacenter;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>一个 Datacenterbroker 实例被创建，创建代理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DatacenterBroker broker = createBroker();</span><br></pre></td></tr></table></figure>
+
+<p>这反过来将调用发送到 createBroker（）方法的以下定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> DatacenterBroker <span class="title">createBroker</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    DatacenterBroker broker = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        broker = <span class="keyword">new</span> DatacenterBroker(<span class="string">"Broker"</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;<span class="comment">//in case of error it will return null object.</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> broker;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>创建一个虚拟机列表，然后再创建一个虚拟机，并将虚拟机添加到虚拟机列表中，然后将虚拟机列表提交到数据中心代理中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Virtual Machine parameter description</span></span><br><span class="line"><span class="keyword">int</span> vmid = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> mips = <span class="number">1000</span>;</span><br><span class="line"><span class="keyword">long</span> size = <span class="number">10000</span>; <span class="comment">// image size (MB)</span></span><br><span class="line"><span class="keyword">int</span> ram = <span class="number">512</span>; <span class="comment">// vm memory (MB)</span></span><br><span class="line"><span class="keyword">long</span> bw = <span class="number">1000</span>;</span><br><span class="line"><span class="keyword">int</span> pesNumber = <span class="number">1</span>; <span class="comment">// number of cpus</span></span><br><span class="line">String vmm = <span class="string">"Xen"</span>; <span class="comment">// VMM name</span></span><br><span class="line"><span class="comment">// create VM model class instance</span></span><br><span class="line">Vm vm = <span class="keyword">new</span> Vm(vmid,brokerId, mips,</span><br><span class="line">                pesNumber, ram, bw,</span><br><span class="line">                size, vmm, <span class="keyword">new</span> CloudletSchedulerTimeShared());</span><br><span class="line"></span><br><span class="line"><span class="comment">// add the VM to the vmList, which was declared in start of the class as class variable</span></span><br><span class="line">vmlist.add(vm);</span><br><span class="line"><span class="comment">// submit vm list to the broker instance created in step 3.</span></span><br><span class="line">broker.submitVmList(vmlist);</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>创建云任务列表，创建云任务，将云任务添加到列表中，将云任务列表提交给数据中心代理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Cloudlet properties</span></span><br><span class="line"><span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">long</span> length = <span class="number">400000</span>;<span class="comment">// estimated instruction length of your workload</span></span><br><span class="line"><span class="keyword">long</span> fileSize = <span class="number">300</span>;<span class="comment">// input size of the file used for the calculation of bandwidth</span></span><br><span class="line"><span class="keyword">long</span> outputSize = <span class="number">300</span>;<span class="comment">//output size of the file used for the calculation of bandwidth</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//this defines how much compute capacity of allocated resource can be consumed by a cloudlet.</span></span><br><span class="line">UtilizationModel utilizationModel = <span class="keyword">new</span> UtilizationModelFull();</span><br><span class="line"></span><br><span class="line"><span class="comment">//New instance of cloudlet is created</span></span><br><span class="line">Cloudlet cloudlet = <span class="keyword">new</span> Cloudlet(id, length, pesNumber,</span><br><span class="line">                    fileSize, outputSize, utilizationModel,</span><br><span class="line">                    utilizationModel, utilizationModel);</span><br><span class="line"></span><br><span class="line"><span class="comment">//set to be executed through the specific broker</span></span><br><span class="line">cloudlet.setUserId(brokerId);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Defines on which VM does this cloudlet is going to be executed during the simulation.</span></span><br><span class="line"><span class="comment">The vmid used here is the one defined during step 4.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">cloudlet.setVmId(vmid);</span><br><span class="line"></span><br><span class="line"><span class="comment">// add the cloudlet to the list</span></span><br><span class="line">cloudletList.add(cloudlet);</span><br><span class="line"><span class="comment">// submit cloudlet list to the broker</span></span><br><span class="line">broker.submitCloudletList\(cloudletList\);</span><br></pre></td></tr></table></figure>
+
+<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>开始模拟，结束模拟</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Simulation started here after all teh configurations are set.</span></span><br><span class="line"><span class="comment">The method calls initiate all the entities and their events</span></span><br><span class="line"><span class="comment">are started scheduling, then each event entity processes</span></span><br><span class="line"><span class="comment">its scheduled tasks. Once all the scheduled tasks are over</span></span><br><span class="line"><span class="comment">the call for this method is over.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">CloudSim.startSimulation();</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Once the startsimulation() method call is over and</span></span><br><span class="line"><span class="comment">it there is no error occured then immdeiatly after</span></span><br><span class="line"><span class="comment">that the stopsimulation() method is call.</span></span><br><span class="line"><span class="comment">This method is going to stop all the entities</span></span><br><span class="line"><span class="comment">and returns the control to main method.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">CloudSim.stopSimulation();</span><br></pre></td></tr></table></figure>
+
+<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>输出结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Final step: Print results when simulation is over</span></span><br><span class="line">List&lt;Cloudlet&gt; newList = broker.getCloudletReceivedList();</span><br><span class="line">printCloudletList(newList);</span><br></pre></td></tr></table></figure>
+
+<p>这反过来调用 printCloudletList 方法，如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printCloudletList</span><span class="params">(List&lt;Cloudlet&gt; list)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = list.size();</span><br><span class="line">    Cloudlet cloudlet;</span><br><span class="line"></span><br><span class="line">    String indent = <span class="string">"    "</span>;</span><br><span class="line">    Log.printLine();</span><br><span class="line">    Log.printLine(<span class="string">"========== OUTPUT =========="</span>);</span><br><span class="line">    Log.printLine(<span class="string">"Cloudlet ID"</span> + indent + <span class="string">"STATUS"</span> + indent</span><br><span class="line">                + <span class="string">"Data center ID"</span> + indent + <span class="string">"VM ID"</span> + indent + <span class="string">"Time"</span> + indent</span><br><span class="line">                + <span class="string">"Start Time"</span> + indent + <span class="string">"Finish Time"</span>+ indent + <span class="string">"End Waiting Time"</span>);</span><br><span class="line"></span><br><span class="line">    DecimalFormat dft = <span class="keyword">new</span> DecimalFormat(<span class="string">"###.##"</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        cloudlet = list.get(i);</span><br><span class="line">        Log.print(indent + cloudlet.getCloudletId() + indent + indent);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (cloudlet.getCloudletStatus() == Cloudlet.SUCCESS) &#123;</span><br><span class="line">            Log.print(<span class="string">"SUCCESS"</span>);</span><br><span class="line"></span><br><span class="line">            Log.printLine(indent + indent + cloudlet.getResourceId()</span><br><span class="line">                        + indent + indent + indent + cloudlet.getVmId()</span><br><span class="line">                        + indent + indent</span><br><span class="line">                        + dft.format(cloudlet.getActualCPUTime()) + indent</span><br><span class="line">                        + indent + dft.format(cloudlet.getExecStartTime())</span><br><span class="line">                        + indent + indent</span><br><span class="line">                        + dft.format(cloudlet.getFinishTime())+ indent + indent</span><br><span class="line">                        + cloudlet.getUtilizationModelCpu());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这最终打印出云资源在其各自资源（即 DataCenter，Broker，虚拟机等）上的执行状态。在模拟过程中，状态日志会在各种情况下打印，完整的日志可能与“ CloudSimExample1.java ” 类似。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Starting CloudSimExample1...  </span><br><span class="line">Initialising...  </span><br><span class="line">Starting CloudSim version 3.0  </span><br><span class="line">Datacenter\_0 is starting...  </span><br><span class="line">Broker is starting...  </span><br><span class="line">Entities started.  </span><br><span class="line">0.0: Broker: Cloud Resource List received with 1 resource\(s\)  </span><br><span class="line">0.0: Broker: Trying to Create VM \#0 in Datacenter\_0  </span><br><span class="line">0.1: Broker: VM \#0 has been created in Datacenter \#2, Host \#0  </span><br><span class="line">0.1: Broker: Sending cloudlet 0 to VM \#0  </span><br><span class="line">400.1: Broker: Cloudlet 0 received  </span><br><span class="line">400.1: Broker: All Cloudlets executed. Finishing...  </span><br><span class="line">400.1: Broker: Destroying VM \#0  </span><br><span class="line">Broker is shutting down...  </span><br><span class="line">Simulation: No more future events  </span><br><span class="line">CloudInformationService: Notify all CloudSim entities for shutting down.  </span><br><span class="line">Datacenter\_0 is shutting down...  </span><br><span class="line">Broker is shutting down...  </span><br><span class="line">Simulation completed.  </span><br><span class="line">Simulation completed.</span><br><span class="line"></span><br><span class="line">========== OUTPUT ==========  </span><br><span class="line">Cloudlet ID    STATUS    Data center ID    VM ID    Time    Start Time    Finish Time  </span><br><span class="line">    0        SUCCESS        2            0        400        0.1        400.1  </span><br><span class="line">CloudSimExample1 finished!</span><br></pre></td></tr></table></figure>
+
+<h2 id="CloudSim-的拓展"><a href="#CloudSim-的拓展" class="headerlink" title="CloudSim 的拓展"></a>CloudSim 的拓展</h2><p>(ps:算法来自网络)<br>CloudSim 主要是对真实的云环境的一种模拟仿真，其各个类分别模拟了云计算的资源分配的各个过程，包括虚拟机向物理机的分配过程，计算任务向虚拟机的分配过程等等，这些分配策略分别在不同的 class 中进行了描述。由于 CloudSim 只是搭建了一个云数据中心的框架，因此具体的分配策略需要我们自己去实现，也就需要去在相应的 Class 中添加自己的策略函数。在 CloudSim 给的 examples 中，给运任务分配虚拟机的时候，使用的函数是<br><code>broker.bindCloudletToVm(cloudlet1.getCloudletId(),vm1.getId());</code><br>,我们可以跟进去发现，该函数是在<br><code>DatacenterBroker.java</code>中，该函数使用的是直接绑定的策略，即程序中指定了云任务和虚拟机的绑定方式，如果我们需要使用自己的分配策略，就得在 <code>DatacenterBroker.java</code> 中添加自己的分配策略函数。下面分别使用两种分配策略对云任务进行分配虚拟机，分别为顺序分配策略和贪心分配策略：</p>
+<h2 id="顺序分配策略"><a href="#顺序分配策略" class="headerlink" title="顺序分配策略"></a>顺序分配策略</h2><p>在 DatacenterBroker 类中实现方法 bindCloudletsToVmsSimple()：用于把一组任务顺序分配给一组虚拟机，当所有的虚拟机都运行有任务后，再从第一个虚拟机开始重头分配任务。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bindCloudletsToVmsSimple</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> vmNum = vmList.size();</span><br><span class="line">        <span class="keyword">int</span> cloudletNum = cloudletList.size();</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cloudletNum; i++) &#123;</span><br><span class="line">            cloudletList.get(i).setVmId(vmList.get(idx).getId());</span><br><span class="line">            idx = (idx + <span class="number">1</span>) % vmNum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="贪心策略"><a href="#贪心策略" class="headerlink" title="贪心策略"></a>贪心策略</h2><p>在<code>DatacenterBroker</code>类中实现方法<code>bindCloudletsToVmsTimeAwared()</code>：定义一个矩阵 time[i][j]，表示任务 i 在虚拟机 j 上所需的执行时间。在初始化矩阵 time 前，首先将任务按 MI 的大小降序排序，将虚拟机按 MIPS 的大小升序排列。从矩阵中行号为 0 的任务开始，每次都尝试分配给最后一列对应的虚拟机，如果该选择相对于其他选择是最优的，就完成分配，否则将任务分配给使当前结果最优的虚拟机。同时，如果有多种分配方法都能使当前结果最优，则将任务分配给运行任务最少的虚拟机。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bindCloudletsToVmsTimeAwared</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> cloudletNum = cloudletList.size();</span><br><span class="line">        <span class="keyword">int</span> vmNum = vmList.size();</span><br><span class="line">        <span class="comment">// time[i][j] 表示任务i在虚拟机j上的执行时间</span></span><br><span class="line">        <span class="keyword">double</span>[][] time = <span class="keyword">new</span> <span class="keyword">double</span>[cloudletNum][vmNum];</span><br><span class="line">        <span class="comment">// cloudletList按MI降序排列, vm按MIPS升序排列</span></span><br><span class="line">        Collections.sort(cloudletList, <span class="keyword">new</span> CloudletComparator());</span><br><span class="line">        Collections.sort(vmList, <span class="keyword">new</span> VmComparator());</span><br><span class="line">        <span class="comment">// ////////For test//////////////////////////////////</span></span><br><span class="line">        System.out.println(<span class="string">"///////////For test///////////////"</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cloudletNum; i++) &#123;</span><br><span class="line">            System.out.print(cloudletList.get(i).getCloudletId() + <span class="string">":"</span></span><br><span class="line">                    + cloudletList.get(i).getCloudletLength() + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vmNum; i++) &#123;</span><br><span class="line">            System.out.print(vmList.get(i).getId() + <span class="string">":"</span></span><br><span class="line">                    + vmList.get(i).getMips() + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">"//////////////////////////////////"</span>);</span><br><span class="line">        <span class="comment">// ////////////////////////////////////////////////////////////////////</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cloudletNum; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; vmNum; j++) &#123;</span><br><span class="line">                time[i][j] = (<span class="keyword">double</span>) cloudletList.get(i).getCloudletLength()</span><br><span class="line">                        / vmList.get(j).getMips();</span><br><span class="line">                System.out.print(<span class="string">"time["</span> + i + <span class="string">"]["</span> + j + <span class="string">"]="</span> + time[i][j]</span><br><span class="line">                        + <span class="string">" "</span>);</span><br><span class="line">                <span class="comment">// For test</span></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(); <span class="comment">// For test</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span>[] vmLoad = <span class="keyword">new</span> <span class="keyword">double</span>[vmNum];<span class="comment">// 在某个虚拟机上任务的总执行时间</span></span><br><span class="line">        <span class="keyword">int</span>[] vmTasks = <span class="keyword">new</span> <span class="keyword">int</span>[vmNum]; <span class="comment">// 在某个Vm上运行的任务数量</span></span><br><span class="line">        <span class="keyword">double</span> minLoad = <span class="number">0</span>;<span class="comment">// 记录当前任务分配方式的最优值</span></span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>;<span class="comment">// 记录当前任务最优分配方式对应的虚拟机列号</span></span><br><span class="line">        <span class="comment">// 第一个cloudlet分配给最快的vm</span></span><br><span class="line">        vmLoad[vmNum - <span class="number">1</span>] = time[<span class="number">0</span>][vmNum - <span class="number">1</span>];</span><br><span class="line">        vmTasks[vmNum - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        cloudletList.get(<span class="number">0</span>).setVmId(vmList.get(vmNum - <span class="number">1</span>).getId());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; cloudletNum; i++) &#123;</span><br><span class="line">            minLoad = vmLoad[vmNum - <span class="number">1</span>] + time[i][vmNum - <span class="number">1</span>];</span><br><span class="line">            idx = vmNum - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = vmNum - <span class="number">2</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">                <span class="comment">// 如果当前虚拟机未分配任务，则比较完当前任务分配给该虚拟机是否最优</span></span><br><span class="line">                <span class="keyword">if</span> (vmLoad[j] == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (minLoad &gt;= time[i][j])</span><br><span class="line">                        idx = j;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (minLoad &gt; vmLoad[j] + time[i][j]) &#123;</span><br><span class="line">                    minLoad = vmLoad[j] + time[i][j];</span><br><span class="line">                    idx = j;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 简单的负载均衡</span></span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (minLoad == vmLoad[j] + time[i][j]</span><br><span class="line">                        &amp;&amp; vmTasks[j] &lt; vmTasks[idx])</span><br><span class="line">                    idx = j;</span><br><span class="line">            &#125;</span><br><span class="line">            vmLoad[idx] += time[i][idx];</span><br><span class="line">            vmTasks[idx]++;</span><br><span class="line">            cloudletList.get(i).setVmId(vmList.get(idx).getId());</span><br><span class="line">            System.out.print(i + <span class="string">"th "</span> + <span class="string">"vmLoad["</span> + idx + <span class="string">"]="</span> + vmLoad[idx]</span><br><span class="line">                    + <span class="string">"minLoad="</span> + minLoad);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果想实现自定义任务绑定，可以自行编写 CloudletList-&gt;VmList 的映射函数，以某种方式完成任务列表中的所有 Cloudlet 的绑定工作。然后在模拟程序中，vm 列表和 cloudlet 列表提交之后调用该自定义函数，即可完成所有任务的绑定（这样自然就不需要自带的轮转法代劳了）。下面采用一种改进型轮转法来绑定任务，长任务尽量优先分配到高性能 VM 上。</p>
+<blockquote>
+<p>插入到 DatacenterBroker 类中</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bindCloudletsToVmsRRImproved</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> vmNum=vmList.size();</span><br><span class="line"><span class="keyword">int</span> cloudletNum=cloudletList.size();</span><br><span class="line"><span class="comment">// 任务按指令长度降序，Vm按性能降序，需要导入包 java.util.Collections</span></span><br><span class="line">Collections.sort(cloudletList, <span class="keyword">new</span> CloudletComparator());</span><br><span class="line"></span><br><span class="line">  Collections.sort(vmList, <span class="keyword">new</span> VmComparator());</span><br><span class="line"><span class="keyword">int</span> idx=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cloudletNum;i++) &#123;</span><br><span class="line"> <span class="comment">//将任务绑定到指定 id 的虚拟机，按Round-Robin轮转法</span></span><br><span class="line"> bindCloudletToVm(vmList.get(idx).getId(), cloudletList.get(i).getCloudletId())</span><br><span class="line"> idx=(idx+<span class="number">1</span>)%vmNum; <span class="comment">//循环遍历虚拟机</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据指令长度降序排列任务，需要导入包 java.util.Comparator</span></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CloudletComparator</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Cloudlet</span>&gt;</span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Cloudlet cl1,Cloudlet cl2)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> (<span class="keyword">int</span>)(c12.getCloudletLength()-cl1. getCloudletLength());</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据执行速度降序排列虚拟机</span></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">VmComparator</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Vm</span>&gt;</span>&#123;</span><br><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Vm vm1, Vm vm2)</span> </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> (<span class="keyword">int</span>) (vm2.getMips() - vm1.getMips());</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写完两个分配策略函数，后面可以写一个测试函数，分别对这两种分配策略进行仿真实验，并进行对比。在<code>org.cloudbus.cloudsim.examples</code>中，写一个自己的<code>MyAllocationTest</code>类，其源码为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAllocationTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** The cloudlet list. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Cloudlet&gt; cloudletList;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> cloudletNum = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** The vmlist. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Vm&gt; vmlist;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> vmNum = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Creates main() to run this example</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Log.printLine(<span class="string">"Starting TestAllocation..."</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// First step: Initialize the CloudSim package. It should be called</span></span><br><span class="line">            <span class="comment">// before creating any entities.</span></span><br><span class="line">            <span class="keyword">int</span> num_user = <span class="number">1</span>; <span class="comment">// number of cloud users</span></span><br><span class="line">            Calendar calendar = Calendar.getInstance();</span><br><span class="line">            <span class="keyword">boolean</span> trace_flag = <span class="keyword">false</span>; <span class="comment">// mean trace events</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// Initialize the CloudSim library</span></span><br><span class="line">            CloudSim.init(num_user, calendar, trace_flag);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Second step: Create Datacenters</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * Datacenters are the resource providers in CloudSim. We need at list one of</span></span><br><span class="line"><span class="comment">             *  them to run a CloudSim simulation</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            Datacenter datacenter0 = createDatacenter(<span class="string">"Datacenter_0"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Third step: Create Broker</span></span><br><span class="line">            DatacenterBroker broker = createBroker();</span><br><span class="line">            <span class="keyword">int</span> brokerId = broker.getId();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//VM description</span></span><br><span class="line">            <span class="keyword">int</span> vmid = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span>[] mipss = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">278</span>,<span class="number">289</span>,<span class="number">132</span>,<span class="number">209</span>,<span class="number">286</span>&#125;;</span><br><span class="line">            <span class="keyword">long</span> size = <span class="number">10000</span>;</span><br><span class="line">            <span class="keyword">int</span> ram = <span class="number">256</span>;</span><br><span class="line">            <span class="keyword">long</span> bw = <span class="number">1000</span>;</span><br><span class="line">            <span class="keyword">int</span> pesNumber = <span class="number">1</span>;</span><br><span class="line">            String vmm = <span class="string">"Xen"</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Fourth step: Create one virtual machine</span></span><br><span class="line">            vmlist = <span class="keyword">new</span> ArrayList&lt;Vm&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;vmNum;i++)&#123;</span><br><span class="line">                vmlist.add(<span class="keyword">new</span> Vm(vmid,brokerId,mipss[i],pesNumber,</span><br><span class="line">                        ram,bw,size,vmm,<span class="keyword">new</span> CloudletSchedulerSpaceShared()));</span><br><span class="line">                vmid++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//submit vm list to the broker</span></span><br><span class="line">            broker.submitVmList(vmlist);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Cloudlet properties</span></span><br><span class="line">            <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">long</span>[] lengths = <span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">19365</span>,<span class="number">49809</span>,<span class="number">32018</span>,<span class="number">44157</span>,<span class="number">16754</span>,</span><br><span class="line">                                        <span class="number">18336</span>,<span class="number">20045</span>,<span class="number">31493</span>,<span class="number">30727</span>,<span class="number">31017</span>&#125;;</span><br><span class="line">            <span class="keyword">long</span> fileSize = <span class="number">300</span>;</span><br><span class="line">            <span class="keyword">long</span> outputSize = <span class="number">300</span>;</span><br><span class="line">            UtilizationModel utilizationModel = <span class="keyword">new</span> UtilizationModelFull();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Fifth step: Create two Cloudlets</span></span><br><span class="line">            cloudletList = <span class="keyword">new</span> ArrayList&lt;Cloudlet&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; cloudletNum;i++)&#123;</span><br><span class="line">                Cloudlet cloudlet = <span class="keyword">new</span> Cloudlet(id,lengths[i],pesNumber,fileSize,</span><br><span class="line">                                    outputSize,utilizationModel,utilizationModel,utilizationModel);</span><br><span class="line">                <span class="comment">//add the cloudlets to the list</span></span><br><span class="line">                cloudlet.setUserId(brokerId);</span><br><span class="line">                cloudletList.add(cloudlet);</span><br><span class="line">                id++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//submit cloudlet list to the broker</span></span><br><span class="line">            broker.submitCloudletList(cloudletList);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//bind the cloudlets to the vms. This way, the broker</span></span><br><span class="line">            <span class="comment">// will submit the bound cloudlets only to the specific VM</span></span><br><span class="line">            <span class="comment">// 下面是顺序算法 broker.bindCloudletsToVmsSimple();</span></span><br><span class="line">            broker.bindCloudletsToVmsSimple();</span><br><span class="line">            <span class="comment">// 下面是贪心算法broker.bindCloudletsToVmsTimeAwared();</span></span><br><span class="line">            <span class="comment">//broker.bindCloudletsToVmsTimeAwared();</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// Sixth step: Starts the simulation</span></span><br><span class="line">            CloudSim.startSimulation();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Final step: Print results when simulation is over</span></span><br><span class="line">            List&lt;Cloudlet&gt; newList = broker.getCloudletReceivedList();</span><br><span class="line">            CloudSim.stopSimulation();</span><br><span class="line">            printCloudletList(newList);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Print the debt of each user to each datacenter</span></span><br><span class="line">            <span class="comment">//datacenter0;</span></span><br><span class="line">            Log.printLine(<span class="string">"TestAllocation finished!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            Log.printLine(<span class="string">"Unwanted errors happen"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Title</span>: createDatacenter</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Description</span>: TODO</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: <span class="doctag">@param</span> name</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: Datacenter</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Date</span>: May 17, 20167:16:32 PM</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Datacenter <span class="title">createDatacenter</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="comment">// Here are the steps needed to create a PowerDatacenter:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1. We need to create a list to store</span></span><br><span class="line">        <span class="comment">// our machine</span></span><br><span class="line">        List&lt;Host&gt; hostList = <span class="keyword">new</span> ArrayList&lt;Host&gt;();</span><br><span class="line">        <span class="comment">// PE and its properties</span></span><br><span class="line">        <span class="keyword">int</span> mips = <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">int</span> hostId=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ram = <span class="number">2048</span>; <span class="comment">//host memory (MB)</span></span><br><span class="line">        <span class="keyword">long</span> storage = <span class="number">1000000</span>; <span class="comment">//host storage</span></span><br><span class="line">        <span class="keyword">int</span> bw = <span class="number">10000</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. A Machine contains one or more PEs or CPUs/Cores.</span></span><br><span class="line">        List&lt;Pe&gt; peList = <span class="keyword">new</span> ArrayList&lt;Pe&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3. Create PEs and add these into a list.</span></span><br><span class="line">        peList.add(<span class="keyword">new</span> Pe(<span class="number">0</span>, <span class="keyword">new</span> PeProvisionerSimple(mips)));</span><br><span class="line">        <span class="comment">// need to store Pe id and MIPS Rating</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//4. Create Host with its id and list of PEs and add them to the list of machines</span></span><br><span class="line">        hostList.add( <span class="keyword">new</span> Host(</span><br><span class="line">                hostId,</span><br><span class="line">                <span class="keyword">new</span> RamProvisionerSimple(ram),</span><br><span class="line">                <span class="keyword">new</span> BwProvisionerSimple(bw),</span><br><span class="line">                storage,</span><br><span class="line">                peList,</span><br><span class="line">                <span class="keyword">new</span> VmSchedulerTimeShared(peList)</span><br><span class="line">                )</span><br><span class="line">        ); <span class="comment">// This is our machine</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5. Create a DatacenterCharacteristics object that stores the</span></span><br><span class="line">        <span class="comment">// properties of a data center: architecture, OS, list of</span></span><br><span class="line">        <span class="comment">// Machines, allocation policy: time- or space-shared, time zone</span></span><br><span class="line">        <span class="comment">// and its price (G$/Pe time unit).</span></span><br><span class="line"></span><br><span class="line">        String arch = <span class="string">"x86"</span>; <span class="comment">// system architecture</span></span><br><span class="line">        String os = <span class="string">"Linux"</span>; <span class="comment">// operating system</span></span><br><span class="line">        String vmm = <span class="string">"Xen"</span>;</span><br><span class="line">        <span class="keyword">double</span> time_zone = <span class="number">10.0</span>; <span class="comment">// time zone this resource located</span></span><br><span class="line">        <span class="keyword">double</span> cost = <span class="number">3.0</span>; <span class="comment">// the cost of using processing in this resource</span></span><br><span class="line">        <span class="keyword">double</span> costPerMem = <span class="number">0.05</span>; <span class="comment">// the cost of using memory in this resource</span></span><br><span class="line">        <span class="keyword">double</span> costPerStorage = <span class="number">0.001</span>; <span class="comment">// the cost of using storage in this resource</span></span><br><span class="line">        <span class="keyword">double</span> costPerBw = <span class="number">0.0</span>; <span class="comment">// the cost of using bw in this resource</span></span><br><span class="line">        LinkedList&lt;Storage&gt; storageList = <span class="keyword">new</span> LinkedList&lt;Storage&gt;(); <span class="comment">//we are not adding SAN devices by now</span></span><br><span class="line">        <span class="comment">//创建数据中心特征对象</span></span><br><span class="line">        DatacenterCharacteristics characteristics = <span class="keyword">new</span> DatacenterCharacteristics( arch, os, vmm,</span><br><span class="line">                hostList, time_zone, cost, costPerMem, costPerStorage, costPerBw);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6. Finally, we need to create a PowerDatacenter object.</span></span><br><span class="line">        Datacenter datacenter = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            datacenter = <span class="keyword">new</span> Datacenter(name, characteristics,</span><br><span class="line">                    <span class="keyword">new</span> VmAllocationPolicySimple(hostList), storageList, <span class="number">0</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> datacenter;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * We strongly encourage users to develop their own broker policies, to submit vms and cloudlets</span></span><br><span class="line"><span class="comment">     * according to the specific rules of the simulated scenario</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Title</span>: createBroker</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Description</span>: TODO</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: DatacenterBroker</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Date</span>: May 17, 20167:17:32 PM</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> DatacenterBroker <span class="title">createBroker</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        DatacenterBroker broker = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            broker = <span class="keyword">new</span> DatacenterBroker(<span class="string">"Broker"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> broker;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printCloudletList</span><span class="params">(List&lt;Cloudlet&gt; list)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> size = list.size();</span><br><span class="line">        Cloudlet cloudlet;</span><br><span class="line">        String indent = <span class="string">" "</span>;</span><br><span class="line">        Log.printLine();</span><br><span class="line">        Log.printLine(<span class="string">"========== OUTPUT =========="</span>);</span><br><span class="line">        Log.printLine(<span class="string">"CloudletID"</span> + indent + <span class="string">"STATUS"</span> + indent +</span><br><span class="line">                        <span class="string">"DatacenterID"</span> + indent + <span class="string">"VMID"</span> + indent +</span><br><span class="line">                        <span class="string">"Time"</span> + indent + <span class="string">"StartTime"</span> + indent + <span class="string">"FinishTime"</span>);</span><br><span class="line">        DecimalFormat dft = <span class="keyword">new</span> DecimalFormat(<span class="string">"###.##"</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            cloudlet = list.get(i);</span><br><span class="line">            Log.print(indent + cloudlet.getCloudletId() + indent + indent);</span><br><span class="line">            <span class="keyword">if</span> (cloudlet.getCloudletStatus() == Cloudlet.SUCCESS)</span><br><span class="line">            &#123;</span><br><span class="line">                Log.print(<span class="string">"SUCCESS"</span>);</span><br><span class="line">                Log.printLine( indent + indent + cloudlet.getResourceId() +</span><br><span class="line">                                indent + indent + indent + cloudlet.getVmId() + indent + indent +</span><br><span class="line">                                dft.format(cloudlet.getActualCPUTime()) + indent + indent +</span><br><span class="line">                                dft.format(cloudlet.getExecStartTime())+ indent + indent +</span><br><span class="line">                                dft.format(cloudlet.getFinishTime()));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在主函数中，分别调用函数<br><code>broker.bindCloudletsToVmsSimple()</code>和<code>broker.bindCloudletsToVmsTimeAwared()</code>，表示分别启动顺序分配策略和贪心策略，其运行结果分别为：<br><img src="https://i.imgur.com/1TVhlVE.png" alt><br><img src="https://i.imgur.com/9rOm9vw.png" alt></p>
+<p>贪心算法见下一篇博客</p>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat-reward-img.jpg" alt="静听、唯美殇 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay-reward-img.jpg" alt="静听、唯美殇 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/电脑/" rel="tag"><i class="fa fa-tag"></i> 电脑</a>
+          
+            <a href="/tags/编程/" rel="tag"><i class="fa fa-tag"></i> 编程</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/ck1lhsu2w004470433yp838ss/" rel="next" title="贪心算法">
+                <i class="fa fa-chevron-left"></i> 贪心算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/ck1lhstyl000x70433k54od98/" rel="prev" title="jQuery ajax方法">
+                jQuery ajax方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="静听、唯美殇">
+            
+              <p class="site-author-name" itemprop="name">静听、唯美殇</p>
+              <div class="site-description motion-element" itemprop="description">for love</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+  <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=863481092&auto=1&height=66"></iframe>
+           </div>
+          
+            <div class="feed-link motion-element">
+              <a href="http://www.zhihu.com/rss" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/copyer1998" title="GitHub &rarr; https://github.com/copyer1998" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/yanni31316" title="Weibo &rarr; http://weibo.com/yanni31316" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yzqdev@outlook.com" title="E-Mail &rarr; mailto:yzqdev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://zhihu.com" title="zhihu &rarr; https://zhihu.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-battery-full"></i>zhihu</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3cplus.com/" title="https://www.w3cplus.com/" rel="noopener" target="_blank">w3cplus</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="https://segmentfault.com/" rel="noopener" target="_blank">segmentfault</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.oschina.net/" title="http://www.oschina.net/" rel="noopener" target="_blank">开源中国</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.csdn.net/" title="https://www.csdn.net/" rel="noopener" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/yanni-87/activities" title="https://www.zhihu.com/people/yanni-87/activities" rel="noopener" target="_blank">友链出租</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#cloudsim"><span class="nav-number">1.</span> <span class="nav-text">cloudsim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-cloudsim"><span class="nav-number">2.</span> <span class="nav-text">配置 cloudsim</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-cloudsim-Eclipse"><span class="nav-number">2.1.</span> <span class="nav-text">配置 cloudsim(Eclipse)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-cloudsim-idea"><span class="nav-number">2.2.</span> <span class="nav-text">配置 cloudsim(idea)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依据-CloudSim-源代码介绍几个核心类："><span class="nav-number">3.</span> <span class="nav-text">依据 CloudSim 源代码介绍几个核心类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudSimExample1-包含以下属性的声明和定义："><span class="nav-number">4.</span> <span class="nav-text">CloudSimExample1 包含以下属性的声明和定义：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步"><span class="nav-number">4.1.</span> <span class="nav-text">第一步:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步"><span class="nav-number">4.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步"><span class="nav-number">4.3.</span> <span class="nav-text">第三步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四步"><span class="nav-number">4.4.</span> <span class="nav-text">第四步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五步"><span class="nav-number">4.5.</span> <span class="nav-text">第五步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六步"><span class="nav-number">4.6.</span> <span class="nav-text">第六步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第七步"><span class="nav-number">4.7.</span> <span class="nav-text">第七步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudSim-的拓展"><span class="nav-number">5.</span> <span class="nav-text">CloudSim 的拓展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顺序分配策略"><span class="nav-number">6.</span> <span class="nav-text">顺序分配策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贪心策略"><span class="nav-number">7.</span> <span class="nav-text">贪心策略</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank"> </a>&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">静听、唯美殇</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">371k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">11:15</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery_lazyload@1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.0"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'S24KfGBIM1Deqy65toUIUymq-gzGzoHsz',
+    appKey: 'EIUyk8fOu1seYDQGNYXyyf0n',
+    placeholder: '✍如果您希望得到作者的回复，请填写上方E-mail地址以便回复',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+  //新增以下代码即可，可以移除.info下所有子节点。
+var infoEle = document.querySelector('#comments .info');
+if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+  infoEle.childNodes.forEach(function(item) {
+    item.parentNode.removeChild(item);
+  });
+}
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('manual', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/live2d-widget","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+</html>
