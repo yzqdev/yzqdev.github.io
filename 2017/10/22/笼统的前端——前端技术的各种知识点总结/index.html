@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yzqdev.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="笼统的前端——前端技术的各种知识点总结核心 Core  HTML(HTML5) CSS(CSS3) JavaScript jQuery ES6 插件  包管理工具 Package Managers  NPM Bower Yarn  前端性能 Front-End Performance  WebPagetest PerfBudget CriticalCSS Picturefill  编辑器 Text">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码库">
+<meta property="og:url" content="https://yzqdev.github.io/2017/10/22/%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="七月飞雪">
+<meta property="og:description" content="笼统的前端——前端技术的各种知识点总结核心 Core  HTML(HTML5) CSS(CSS3) JavaScript jQuery ES6 插件  包管理工具 Package Managers  NPM Bower Yarn  前端性能 Front-End Performance  WebPagetest PerfBudget CriticalCSS Picturefill  编辑器 Text">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-10-22T11:17:00.000Z">
+<meta property="article:modified_time" content="2022-02-20T19:01:02.052Z">
+<meta property="article:author" content="静听、唯美殇">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="js">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yzqdev.github.io/2017/10/22/%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yzqdev.github.io/2017/10/22/%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/","path":"2017/10/22/笼统的前端——前端技术的各种知识点总结/","title":"代码库"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>代码库 | 七月飞雪</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">七月飞雪</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">YZQ BLOG</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">23</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">31</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">笼统的前端——前端技术的各种知识点总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="静听、唯美殇"
+      src="/uploads/avatar.gif">
+  <p class="site-author-name" itemprop="name">静听、唯美殇</p>
+  <div class="site-description" itemprop="description">for love</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yzqdev" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yzqdev" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yanni31316" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yanni31316" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yzqdev@outlook.com" title="E-Mail → mailto:yzqdev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zhihu.com/" title="zhihu → https:&#x2F;&#x2F;zhihu.com" rel="noopener" target="_blank"><i class="fa fa-battery-full fa-fw"></i>zhihu</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.w3cplus.com/" title="https:&#x2F;&#x2F;www.w3cplus.com&#x2F;" rel="noopener" target="_blank">w3cplus</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://segmentfault.com/" title="https:&#x2F;&#x2F;segmentfault.com&#x2F;" rel="noopener" target="_blank">segmentfault</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.oschina.net/" title="http:&#x2F;&#x2F;www.oschina.net&#x2F;" rel="noopener" target="_blank">开源中国</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.csdn.net/" title="https:&#x2F;&#x2F;www.csdn.net&#x2F;" rel="noopener" target="_blank">CSDN</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/yanni-87/activities" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yanni-87&#x2F;activities" rel="noopener" target="_blank">友链出租</a>
+        </li>
+    </ul>
+  </div>
+<article><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=574566207&auto=1&height=66"></iframe></article>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/yzqdev" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yzqdev.github.io/2017/10/22/%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.gif">
+      <meta itemprop="name" content="静听、唯美殇">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="七月飞雪">
+      <meta itemprop="description" content="for love">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="代码库 | 七月飞雪">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          代码库
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-10-22 19:17:00" itemprop="dateCreated datePublished" datetime="2017-10-22T19:17:00+08:00">2017-10-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-21 03:01:02" itemprop="dateModified" datetime="2022-02-21T03:01:02+08:00">2022-02-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="笼统的前端——前端技术的各种知识点总结"><a href="#笼统的前端——前端技术的各种知识点总结" class="headerlink" title="笼统的前端——前端技术的各种知识点总结"></a>笼统的前端——前端技术的各种知识点总结</h1><p>核心 Core</p>
+<ul>
+<li>HTML(HTML5)</li>
+<li>CSS(CSS3)</li>
+<li>JavaScript</li>
+<li>jQuery</li>
+<li>ES6</li>
+<li>插件</li>
+</ul>
+<p>包管理工具 Package Managers</p>
+<ul>
+<li>NPM</li>
+<li>Bower</li>
+<li>Yarn</li>
+</ul>
+<p>前端性能 Front-End Performance</p>
+<ul>
+<li>WebPagetest</li>
+<li>PerfBudget</li>
+<li>CriticalCSS</li>
+<li>Picturefill</li>
+</ul>
+<p>编辑器 Text Editors</p>
+<ul>
+<li>WebStorm</li>
+<li>VScode</li>
+<li>Sublime Text</li>
+<li>Atom</li>
+<li>HBuilder</li>
+</ul>
+<p>JS框架 JS Frameworks</p>
+<ul>
+<li>Backbone</li>
+<li>AngularJs</li>
+<li>React</li>
+<li>Vue</li>
+</ul>
+<p>UI框架 UI Frameworks</p>
+<ul>
+<li>Bootstrap</li>
+<li>Ionic</li>
+<li>Foundation</li>
+<li>FrozenUI</li>
+<li>materializecss</li>
+<li>mui</li>
+<li>Ant Design</li>
+<li>eleme</li>
+</ul>
+<p>JS预处理 JS Preprocessors</p>
+<ul>
+<li>TypeScript</li>
+<li>CoffeeScript</li>
+<li>Babel</li>
+</ul>
+<p>响应式网页 Responsible WEB Design</p>
+<ul>
+<li>渐进增强、可访问性</li>
+</ul>
+<p>过程自动化 Process Automation</p>
+<ul>
+<li>Grunt</li>
+<li>Gulp</li>
+</ul>
+<p>模板引擎 Templating</p>
+<ul>
+<li>Handlebars</li>
+<li>Haml</li>
+<li>Jade</li>
+</ul>
+<p>代码质量 Code Quality</p>
+<ul>
+<li>JSCS</li>
+<li>ESLint</li>
+</ul>
+<p>浏览器刷新 Browser Refreshing</p>
+<ul>
+<li>LiveReload</li>
+<li>Guard</li>
+</ul>
+<p>构建工具 Build Tools</p>
+<ul>
+<li>RequireJS</li>
+<li>seajs</li>
+<li>Browserify</li>
+<li>Webpack</li>
+</ul>
+<p>CSS预处理器 CSS Preprocessors</p>
+<ul>
+<li>Sass</li>
+<li>Less</li>
+<li>stylus</li>
+</ul>
+<p>后端 Back-End</p>
+<ul>
+<li>nodeJS</li>
+<li>PHP</li>
+</ul>
+<p>版本控制 Version Control</p>
+<ul>
+<li>Git</li>
+<li>Svn</li>
+</ul>
+<p>代码测试 Testing</p>
+<p>CSS设计模式 OOCSS &amp; Style Guides</p>
+<ul>
+<li>MVCSS</li>
+</ul>
+<hr>
+<p>核心 Core</p>
+<p>HTML5</p>
+<ul>
+<li>W3C <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/html5/">http://www.w3school.com.cn/html5/</a></li>
+<li>W3C <a target="_blank" rel="noopener" href="https://www.w3.org/html/ig/zh/wiki/HTML5">https://www.w3.org/html/ig/zh/wiki/HTML5</a></li>
+<li>菜鸟教程 <a target="_blank" rel="noopener" href="http://www.runoob.com/html/html5-intro.html">http://www.runoob.com/html/html5-intro.html</a></li>
+<li>HTML5中文门户 <a target="_blank" rel="noopener" href="http://www.html5cn.org/">http://www.html5cn.org/</a></li>
+</ul>
+<p>CSS3</p>
+<ul>
+<li>W3C CSS教程 <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/css/index.asp">http://www.w3school.com.cn/css/index.asp</a></li>
+<li>W3C CSS3教程 <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/css3/index.asp">http://www.w3school.com.cn/css3/index.asp</a></li>
+<li>菜鸟教程CSS教程 <a target="_blank" rel="noopener" href="http://www.runoob.com/css/css-tutorial.html">http://www.runoob.com/css/css-tutorial.html</a></li>
+<li>菜鸟教程CSS3教程 <a target="_blank" rel="noopener" href="http://www.runoob.com/css3/css3-tutorial.html">http://www.runoob.com/css3/css3-tutorial.html</a></li>
+<li>CSS参考手册 <a target="_blank" rel="noopener" href="http://css.doyoe.com/">http://css.doyoe.com/</a></li>
+</ul>
+<p>JS</p>
+<ul>
+<li>W3C <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/js/">http://www.w3school.com.cn/js/</a></li>
+<li>菜鸟教程 <a target="_blank" rel="noopener" href="http://www.runoob.com/js/js-tutorial.html">http://www.runoob.com/js/js-tutorial.html</a></li>
+<li>廖雪峰js教程 <a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/">http://www.liaoxuefeng.com</a></li>
+<li>js标准参考教程-阮一峰<a target="_blank" rel="noopener" href="http://javascript.ruanyifeng.com/">http://javascript.ruanyifeng.com/</a></li>
+</ul>
+<p>jQuery</p>
+<ul>
+<li>W3C <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jquery/">http://www.w3school.com.cn/jquery/</a></li>
+<li>菜鸟教程 <a target="_blank" rel="noopener" href="http://www.runoob.com/jquery/jquery-tutorial.html">http://www.runoob.com/jquery/jquery-tutorial.html</a></li>
+<li>极客学院 <a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/jquery-tutorial/">http://wiki.jikexueyuan.com/project/jquery-tutorial/</a></li>
+<li>廖雪峰 <a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/">http://www.liaoxuefeng.com/wiki/</a></li>
+<li>参考手册 <a target="_blank" rel="noopener" href="http://www.css88.com/jqapi-1.9/">http://www.css88.com/jqapi-1.9/</a></li>
+<li>参考手册 <a target="_blank" rel="noopener" href="http://www.runoob.com/manual/jquery/">http://www.runoob.com/manual/jquery/</a></li>
+</ul>
+<p>ES6</p>
+<ul>
+<li>阮一峰ES6 <a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/">http://es6.ruanyifeng.com/</a></li>
+<li>极客学院 <a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/es6/">http://wiki.jikexueyuan.com/project/es6/</a></li>
+<li>JavaScript 标准参考　阮一峰<a target="_blank" rel="noopener" href="http://javascript.ruanyifeng.com/advanced/ecmascript6.html">http://javascript.ruanyifeng.com/advanced/ecmascript6.html</a></li>
+</ul>
+<p>插件</p>
+<ul>
+<li>parallel.js: 前后端通用的一个并行库</li>
+<li>zepto: 用于现代浏览器的兼容 jQuery 的库</li>
+<li>totoro: 稳定的跨浏览器测试工具</li>
+<li>TheaterJS: 一个用于模拟人输入状态的 JS 库</li>
+<li>stellar.js: 前端用于实现异步滚动效果的库，现已不再维护</li>
+<li>skrollr: 另一款实现一步滚动的开源库，使用人数众多，可实现各种狂拽酷炫掉渣天的前端效果，看真相</li>
+<li>Framework7: 前端框架，是开发人员可以基于 web 技术构建 IOS7 程序</li>
+<li>regulex: 用于生成 正则表达式 的可视化流程图</li>
+<li>markdown-it: 新型 Markdown 解析器，快速，支持插件</li>
+<li>multiline: 用于 Javascript 中的多行文本，类似于 Ruby 的 HERE Doc</li>
+<li>screenfull.js: 全屏插件，支持各大浏览器</li>
+<li>lunr.js: 类似于 Solr, 但是用于浏览器上的全文搜索引擎，可以为 JSON 创建索引，离线也可以使用</li>
+<li>jquery.hotkeys: jQuery 插件，用于绑定热键</li>
+<li>breach_core: Javascript 编写的 Browser (浏览器)</li>
+<li>octocard: 用于生成 Github 信息卡片的库</li>
+<li>github-cards: 用于生成 Github 信息卡片的库</li>
+<li>money.js: 轻量级货币转换库，web 和 node 皆可用</li>
+<li>accounting.js: 轻量级的数字、货币转换库</li>
+<li>javascript-algorithms: Javascript 实现的各种算法集合</li>
+<li>lazy.js: 类似于 underscore, 但是会延迟执行，某些场景下，性能会有很大的提升</li>
+<li>seajs: 前端模块加载器，解决模块化、依赖等问题</li>
+<li>jQuery-One-Page-Nav: 单页应用中一个用于处理导航栏的库</li>
+<li>js.js: Javascript 实现的 javascript JIT</li>
+<li>jquery-ui: jQuery 团队开发的 UI 相关的前端库，功能强大</li>
+<li>todomvc: 分别基于 AngularJS/EmberJS/Backbone等实现的 TODO List, 帮助开发者选择前端 MVC 库</li>
+<li>localForage: Mozilla 出品，用于离线存储，基于IndexedDB, WebSQL 或者 localStorage, 提供一致的接口</li>
+<li>EventEmitter: 浏览器版的 EventEmitter</li>
+<li>jquery.serializeJSON: jQuery 插件，用于将 form 表单序列化成 JSON 数据</li>
+<li>knockout: 前端 MVVM 框架，用于开发富前端应用</li>
+<li>mermaid: 可以根据文本生成流程图，类似于 Markdown 的语法</li>
+<li>js-sequence-diagrams: 另一款可以根据文本生成流程图的库，类似于 Markdown 的语法</li>
+<li>flow: 一个用来检测 Javascript 语法错误的库， Facebook 出品</li>
+<li>zoomooz: jQuery 插件，用来处理浏览器缩放</li>
+<li>fancyBox: 一个用于放大缩小图片、Web 内容或者多媒体元素的库，优雅大方</li>
+<li>mithril.js: 轻量型前端 MVC 框架，部分使用场景下性能优于 Angular.js 和 React</li>
+<li>backbone: 强大的前端 MVC 库，鼻祖级前端库，最初为了配合 Rails 来模块化前端应用，兼容性良好 (兼容到 IE6)，插件丰富，性能良好</li>
+<li>jquery.smartbanner: smartbanner 是从 IOS6 开始支持的一个新特性, 这个插件提供了对早期 IOS4/5 和 Android 的支持</li>
+<li>jquery.scrollTo: 在页面上以一个元素为起始以动画的方式移动(ScrollTo)到另一个元素， 支持回退等</li>
+<li>jScrollPane: 自定义的滚动条，让所有浏览器都显示一样的滚动条</li>
+<li>onepage-scroll: 提供类似于 iPhone6 展示页类似的效果，适用于单页应用，兼容到 IE8</li>
+<li>scrollMonitor: 前端插件用来监控元素的滚动事件(进入、退出等)，性能很好</li>
+<li>ScrollMagic: 神奇的滚动交互效果插件，可以在滚动的过程中设置各种各样的动态效果</li>
+<li>infinite-scroll: 滚动加载，滚动到最下到自动加载， Paul Irish 大神之作</li>
+<li>animatable: 仅仅依靠 <code>border-width</code> 和 <code>background-position</code> 实现的各种动态效果，看真相</li>
+<li>Fluidbox: 页面上内嵌图片的放大缩小效果，类似于 Medium 中的效果</li>
+<li>jquery-validation: jQuery 的一个插件，用于校验 Form 表单</li>
+<li>BigVideo.js: jQuery 的一个插件, 用于实现大背景(视频、图片)效果</li>
+<li>emscripten: 一款基于 LLVM, 可以将 C/C++ 转换成 Javascript 的工具，使得 Javascript 可以近乎 Native 的速度</li>
+<li>qrcode-generator: 各种语言的二维码生成工具</li>
+<li>device.js: 一个可以检测设备类型的工具，可以让我们根据不同的设备来为其定制响应的 Javascript 和 CSS</li>
+<li>jquery-qrcode: jQuery 插件，用来生成二维码</li>
+<li>Wookmark-jQuery: jQuery 的一个插件，可以用来实现瀑布流的效果</li>
+<li>isotope: 可以用来过滤、排列布局，实现美观的动态布局切换效果，Demo</li>
+<li>lazysizes: 功能强大的图片延迟加载工具，可以首先加载一个低质量的图片，然后再加载高质量的图片</li>
+<li>progressbar.js: 简洁美观的进度条，扁平化</li>
+<li>pigshell: 一个由 Javascript 实现的Shell, 将互联网当做一个大的文件系统, 通过 cd/ls/cat…..等命令, 可以访问 Facebook/Twitter/Google Drive 等网络服务</li>
+<li>spectrum: Js实现的颜色选择器 (Colorpicker)</li>
+<li>jQuery.countdown: jQuery 倒计时插件</li>
+<li>summernote: WYSIWYG 富文本编辑器</li>
+<li>awesomplete: 非常轻型的一个自动补全 JS 库, 没有任何依赖, 配置简单, 美观</li>
+<li>switchery: IOS 7 上 Switch 的 JS 实现, 支持 IE8 及以上浏览器</li>
+<li>trix: Basecamp 公司出品的富文本编辑器，简洁小巧</li>
+<li>sensor.js: 在智能移动设备浏览器上，通过HTML5的api使用移动设备的功能。定位、运动、倾斜等</li>
+<li>hyhyhy: 用于创建 基于 HTML5 的 演示文稿</li>
+<li>swipebox: jQuery 插件，用于处理移动端的触摸事件</li>
+<li>FileAPI: 前端用户处理文件（拖放、多文件上传等）</li>
+<li>Sortable: 现代浏览器上用于实现元素拖拽排序的功能，支持 Meteor, AngularJS, React，不依赖 jQuery</li>
+<li>Swiper: 用于实现浏览器上的滑动切换效果，支持硬件加速</li>
+<li>matter-js: 2D 物理效果引擎，碰撞、弹跳等</li>
+<li>jQTouch: 用于辅助创建手机端的 Web 应用，支持主题、Zepto.js 等</li>
+<li>snabbt.js: 一个利用 Javascript 和 CSS transform 的 animation 库</li>
+<li>c3: 基于 D3 的图表库</li>
+<li>echarts: 企业级图表库，百度开发</li>
+<li>parallax.js: 一个用于响应智能手机 orientation 的库</li>
+<li>jQuery-Animate-Enhanced: jQuery 动画库的一个增强，用于现代浏览器</li>
+<li>wysihtml: 富文本编辑器，适用于现代浏览器</li>
+<li>slip: 一个通过滑动或者拖拽来操控列表的库</li>
+<li>evil-icons: 一个矢量图库，提供 Ruby/Node 等支持</li>
+<li>PhotoSwipe: JS 的一个图片展示库</li>
+<li>focusable: 是页面上一个元素高亮的库，有图有真相</li>
+<li>firefox.html: Firefox 在浏览器端的实现 —— HTML 版的 Firefox</li>
+<li>jquery-mobile: jQuery 团队开发的用于辅助手机端 web app 开发的库，基于 HTML5</li>
+<li>mobile-angular-ui: 基于angularjs和bootstarp的web app开发框架</li>
+<li>interact.js: 一个适用于现代浏览器的，用于处理 手势、拖放、缩放等的库</li>
+<li>rebound-js: 实现部分物理效果，Facebook 出品</li>
+<li>basket.js: 基于 LocalStorage 的资源加载器，可以用来缓存 script 和 css, 手机端使用速度快于浏览器直接缓存</li>
+<li>iscroll: 高性能的滚动(scroll)处理库，功能强大，支持各种事件，不依赖任何的库，且插件丰富, 大众点评的手机端列表滚动就是用这个库处理的</li>
+<li>metrics-graphics: 基于 D3 的图表库，简洁、高效，Mozilla 出品</li>
+<li>accessible-html5-video-player: Paypal 出品的 Video 播放器</li>
+<li>loading: 几种 Loading 效果，基于 SVG</li>
+<li>flippant.js: 一款能够漂亮的网页元素翻转效果库，代码许久不更新，不过作为源码学习还是不错的</li>
+<li>move.js: 基于 CSS3 的前端动画框架</li>
+<li>scrollReveal.js: 使元素以非常酷帅的方式进入画布 (Viewpoint)，看 Demo</li>
+<li>Modernizr: 一个用来检测 HTML5 和 CSS3 支持情况的库</li>
+<li>foundation: 另一款前端模版框架，类似于 Bootstrap</li>
+<li>Flat-UI: Bootstrap 的一款主题，简洁美观</li>
+<li>iCheck: 一款漂亮的 Checkbox 插件</li>
+<li>Swipe: 非常轻量级的一个图片滑动切换效果库, 性能良好, 尤其是对手机的支持, 压缩后的大小约 5kb</li>
+<li>slick: 功能异常强大的一个图片滑动切换效果库</li>
+<li>SocialButtons: 漂亮的社交按钮</li>
+<li>sweetalert: 一个非常美观的用于替换浏览器默认 alert 的库</li>
+<li>web-animations-js: Javascript 实现的 Web Animation API</li>
+<li>vivus: 可以动态描绘 SVG 的 JS 库, 支持多种动画</li>
+<li>plyr: 轻量, 小巧, 美观的 HTML5 视频播放器</li>
+<li>timesheet.js: 基于 HTML5 &amp; CSS3 时间表</li>
+<li>slideout: 一个非常美观的侧滑菜单</li>
+</ul>
+<hr>
+<p>包管理工具 Package Managers</p>
+<p>NPM</p>
+<ul>
+<li>菜鸟教程NPM 使用介绍 <a target="_blank" rel="noopener" href="http://www.runoob.com/nodejs/nodejs-npm.html">http://www.runoob.com/nodejs/nodejs-npm.html</a></li>
+<li>淘宝 NPM 镜像 <a target="_blank" rel="noopener" href="https://npm.taobao.org/">https://npm.taobao.org/</a></li>
+<li>npm 模块安装机制简介 <a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/01/npm-install.html">http://www.ruanyifeng.com/blog/2016/01/npm-install.html</a></li>
+<li>npm包搜索地址 <a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></li>
+</ul>
+<p>Bower</p>
+<ul>
+<li>Bower中文网 <a target="_blank" rel="noopener" href="http://www.bowercn.com/">http://www.bowercn.com/</a></li>
+<li>Bower：客户端库管理工具-阮一峰 <a target="_blank" rel="noopener" href="http://javascript.ruanyifeng.com/tool/bower.html">http://javascript.ruanyifeng.com/tool/bower.html</a></li>
+</ul>
+<p>Yarn</p>
+<ul>
+<li>yarn中文网 <a target="_blank" rel="noopener" href="https://yarnpkg.com/zh-Hans/%E5%BF%AB%E9%80%9F%E3%80%81%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86">https://yarnpkg.com/zh-Hans/快速、可靠、安全的依赖管理</a></li>
+<li>YARN 简介 <a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/data/library/bd-yarn-intro/">https://www.ibm.com/developerworks/cn/data/library/bd-yarn-intro/</a></li>
+</ul>
+<hr>
+<p>编辑器 Text Editors</p>
+<p>WebStorm</p>
+<ul>
+<li>官网下载 <a target="_blank" rel="noopener" href="http://www.jetbrains.com/webstorm/download">http://www.jetbrains.com/webstorm/download</a></li>
+<li>前端网破解版下载 <a target="_blank" rel="noopener" href="http://www.qdfuns.com/tools">http://www.qdfuns.com/tools</a></li>
+</ul>
+<p>VScode</p>
+<ul>
+<li>官网下载 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>vscode 插件精选 - 献给所有前端工程师<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006697219">https://segmentfault.com/a/1190000006697219</a></li>
+</ul>
+<p>SublimeText</p>
+<ul>
+<li>官网下载 <a target="_blank" rel="noopener" href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></li>
+<li>前端网破解版插件版下载 <a target="_blank" rel="noopener" href="http://www.qdfuns.com/tools">http://www.qdfuns.com/tools</a></li>
+</ul>
+<ul>
+<li>SublimeCodeIntel: Sublime Text 的代码补全工具，支持多种语言</li>
+<li>Emmet：一个用于提高开发效率的编辑器插件，前身是Zen coding</li>
+<li>SublimeLinter: 一个提供代码质量检测的插件</li>
+<li>SublimeTmpl：快速新建指定的模版文件</li>
+<li>Syntax-highlighting-for-Sass：sass代码高亮插件</li>
+<li>MarkdownEditing: Sublime Text 强大的 Markdown 扩展, 提供快捷键, 主题等</li>
+<li>ApplySyntax: 辅助检测语法插件</li>
+<li>CTags: Sublime Text Ctags 支持插件, 需要安装 ctags</li>
+<li>sublime-react: React 代码高亮</li>
+</ul>
+<p>Atom</p>
+<ul>
+<li>官网下载 <a target="_blank" rel="noopener" href="https://atom.io/">https://atom.io/</a></li>
+</ul>
+<p>HBuilder</p>
+<ul>
+<li>官网下载 <a target="_blank" rel="noopener" href="http://www.dcloud.io/">http://www.dcloud.io/</a></li>
+</ul>
+<hr>
+<p>JS框架 JS Frameworks</p>
+<p>Backbone</p>
+<ul>
+<li>Backbone.js API中文文档<a target="_blank" rel="noopener" href="http://www.css88.com/doc/backbone/">http://www.css88.com/doc/backbone/</a></li>
+</ul>
+<p>AngularJs</p>
+<ul>
+<li>中文官方文档<a target="_blank" rel="noopener" href="https://angular.cn/">https://angular.cn/</a></li>
+<li>angularjs中文网<a target="_blank" rel="noopener" href="http://www.apjs.net/">http://www.apjs.net/</a></li>
+<li>angularjs教程<a target="_blank" rel="noopener" href="http://www.angularjs.net.cn/">http://www.angularjs.net.cn/</a></li>
+<li>Angular 基础入门<a target="_blank" rel="noopener" href="http://www.cnblogs.com/micua/p/angular-essential.html">http://www.cnblogs.com/micua/p/angular-essential.html</a></li>
+</ul>
+<ul>
+<li>angular-masonry: Masonry 的 AngularJS 插件，用于瀑布流</li>
+<li>angular-schema-form: 根据 JSON 生成响应的 Form 表单</li>
+<li>restangular: Angular 中用来处理 RESTful API 的插件，可替代 $resource</li>
+<li>ng-cordova: Cordova 常用组件的 Angular 版本</li>
+<li>angular-translate: Angular 的国际化 (I18n)</li>
+<li>ng-inspector: Chrome 插件，用于调试 Angular</li>
+<li>angularjs-style-guide: AngularJS 代码风格</li>
+<li>ngReact: React 的 Angular 插件，可以在 Angular 中使用 React Components</li>
+<li>material: Google Material Design 效果的 Angular 实现</li>
+<li>angular-local-storage: Angular 插件, 提供了对 localStorage 的友好支持, 并对不支持的浏览器使用 cookie 优雅降级</li>
+<li>angular-filter: 一组有用的 Angular Filters</li>
+<li>bindonce: Angular 插件, 用于减少 Watcher 的数量, 提升性能</li>
+</ul>
+<p>React</p>
+<ul>
+<li>英文官方文档<a target="_blank" rel="noopener" href="https://facebook.github.io/react/docs/hello-world.html">https://facebook.github.io/react/docs/hello-world.html</a></li>
+<li>中文官方文档<a target="_blank" rel="noopener" href="http://reactjs.cn/react/docs/getting-started-zh-CN.html">http://reactjs.cn/react/docs/getting-started-zh-CN.html</a></li>
+<li>gitbooks手册<a target="_blank" rel="noopener" href="https://hulufei.gitbooks.io/react-tutorial/content/introduction.html">https://hulufei.gitbooks.io/react-tutorial/content/introduction.html</a></li>
+<li>阮一峰react入门<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/03/react.html">http://www.ruanyifeng.com/blog/2015/03/react.html</a></li>
+<li>阮一峰React Router入门<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/05/react_router.html">http://www.ruanyifeng.com/blog/2016/05/react_router.html</a></li>
+<li>React Router 中文文档<a target="_blank" rel="noopener" href="https://react-guide.github.io/react-router-cn/">https://react-guide.github.io/react-router-cn/</a></li>
+<li>react-redux 中文文档<a target="_blank" rel="noopener" href="http://cn.redux.js.org/docs/react-redux/index.html">http://cn.redux.js.org/docs/react-redux/index.html</a></li>
+<li>阮一峰Redux 入门教程<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog">http://www.ruanyifeng.com/blog</a></li>
+</ul>
+<ul>
+<li>react: React 框架源代码</li>
+<li>react-native: Facebook 出品的使用 React 开发 IOS 原生应用的框架</li>
+<li>react-hot-loader: 实时调整 React 组件效果</li>
+<li>grunt-react: React 的 Grunt 组件, 用于将 JSX 编译成 JS</li>
+<li>touchstonejs: 基于 React 的手机应用前端框架</li>
+<li>essential-react: 基于 React, ES6, React-Router的一个应用脚手架</li>
+<li>react-router: React 路由解决方案</li>
+</ul>
+<p>Vue</p>
+<ul>
+<li>vue官方<a target="_blank" rel="noopener" href="http://cn.vuejs.org/">http://cn.vuejs.org/</a></li>
+<li>vuex官方<a target="_blank" rel="noopener" href="http://vuex.vuejs.org/zh-cn/">http://vuex.vuejs.org/zh-cn/</a></li>
+<li>vue-router官方<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh-cn/">https://router.vuejs.org/zh-cn/</a></li>
+</ul>
+<hr>
+<p>UI框架 UI Frameworks</p>
+<p>Bootstrap</p>
+<ul>
+<li>最受欢迎的 HTML、CSS 和 JS 框架 <a target="_blank" rel="noopener" href="http://v3.bootcss.com/">http://v3.bootcss.com/</a></li>
+</ul>
+<p>Ionic</p>
+<ul>
+<li>一款接近原生的Html5移动App开发框架　会html css js就可以开发app<a target="_blank" rel="noopener" href="http://www.ionic.wang/">http://www.ionic.wang/</a></li>
+</ul>
+<p>Foundation</p>
+<ul>
+<li>Foundation 中文网 迄今为止最好的响应式前端框架<a target="_blank" rel="noopener" href="http://www.foundcss.com/">http://www.foundcss.com</a></li>
+</ul>
+<p>FrozenUI</p>
+<ul>
+<li>移动端服务的前端框架<a target="_blank" rel="noopener" href="http://frozenui.github.io/">http://frozenui.github.io/</a></li>
+</ul>
+<p>materializecss</p>
+<ul>
+<li>基于Material Design的主流前端响应式框架<a target="_blank" rel="noopener" href="http://www.materializecss.cn/">http://www.materializecss.cn/</a></li>
+</ul>
+<p>mui</p>
+<ul>
+<li>最接近原生APP体验的高性能前端框架<a target="_blank" rel="noopener" href="http://dev.dcloud.net.cn/mui/">http://dev.dcloud.net.cn/mui/</a></li>
+</ul>
+<p>AntDesign</p>
+<ul>
+<li>和react配合的UI框架<a target="_blank" rel="noopener" href="https://ant.design/">https://ant.design</a></li>
+</ul>
+<p>eleme</p>
+<ul>
+<li>和vue配合的UI框架<a target="_blank" rel="noopener" href="http://element.eleme.io/">http://element.eleme.io/</a></li>
+</ul>
+<hr>
+<p>JS预处理 JS Preprocessors</p>
+<p>TypeScript</p>
+<ul>
+<li>TypeScript 入门教程 菜鸟教程<a target="_blank" rel="noopener" href="http://www.runoob.com/">http://www.runoob.com/</a></li>
+<li>TypeScript中文网<a target="_blank" rel="noopener" href="https://www.tslang.cn/">https://www.tslang.cn/</a></li>
+<li>TypeScript教程gitbook<a target="_blank" rel="noopener" href="https://www.gitbook.com/">https://www.gitbook.com/</a></li>
+</ul>
+<p>CoffeeScript</p>
+<ul>
+<li>CoffeeScript 中文<a target="_blank" rel="noopener" href="http://coffee-script.org/">http://coffee-script.org/</a></li>
+<li>CoffeeScript 实用手册 极客学院<a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/coffeescript/">http://wiki.jikexueyuan.com/project/coffeescript/</a></li>
+</ul>
+<hr>
+<p>过程自动化 Process Automation</p>
+<p>Grunt</p>
+<ul>
+<li>Grunt中文网<a target="_blank" rel="noopener" href="http://www.gruntjs.net/">http://www.gruntjs.net/</a></li>
+</ul>
+<p>Gulp</p>
+<ul>
+<li>gulp.js 中文网<a target="_blank" rel="noopener" href="http://www.gulpjs.com.cn/">http://www.gulpjs.com.cn/</a></li>
+<li>gulp详细入门教程<a target="_blank" rel="noopener" href="http://www.ydcss.com/">http://www.ydcss.com/</a></li>
+<li>前端构建工具gulpjs的使用介绍及技巧<a target="_blank" rel="noopener" href="http://www.cnblogs.com/2050/p/4198792.html">http://www.cnblogs.com/2050/p/4198792.html</a></li>
+<li>Gulp开发教程<a target="_blank" rel="noopener" href="https://www.w3ctech.com/topic/134">https://www.w3ctech.com/topic/134</a></li>
+</ul>
+<hr>
+<p>模板引擎 Templating</p>
+<p>Handlebars</p>
+<ul>
+<li>handlebarsjs官网<a target="_blank" rel="noopener" href="http://handlebarsjs.com/">http://handlebarsjs.com/</a></li>
+<li>Handlebars中文文档<a target="_blank" rel="noopener" href="http://www.360doc.com/content/">http://www.360doc.com/content/</a></li>
+<li>Handlebars.js 中文文档<a target="_blank" rel="noopener" href="http://keenwon.com/992.html">http://keenwon.com/992.html</a></li>
+<li>Handlebars的使用方法文档整理<a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/fqQFN3">http://www.tuicool.com/articles/fqQFN3</a></li>
+</ul>
+<p>Haml</p>
+<ul>
+<li>haml官方文档<a target="_blank" rel="noopener" href="https://github.com/haml/haml">https://github.com/haml/haml</a></li>
+<li>haml入门<a target="_blank" rel="noopener" href="http://blog.csdn.net/napoay/article/details/50491363">http://blog.csdn.net/napoay/article/details/50491363</a></li>
+</ul>
+<p>Jade</p>
+<ul>
+<li>Jade 官方的英文文档<a target="_blank" rel="noopener" href="http://www.w3cplus.com/html/how-to-use-jade.html">http://www.w3cplus.com/html/how-to-use-jade.html</a></li>
+<li>Jade的使用<a target="_blank" rel="noopener" href="http://www.w3cplus.com/html/how-to-use-jade.html">http://www.w3cplus.com/html/how-to-use-jade.html</a></li>
+<li>带你学习Jade模板引擎视频<a target="_blank" rel="noopener" href="http://www.imooc.com/learn/259">http://www.imooc.com/learn/259</a></li>
+</ul>
+<hr>
+<p>构建工具 Build Tools</p>
+<p>RequireJS</p>
+<ul>
+<li>RequireJS 英文网<a target="_blank" rel="noopener" href="http://requirejs.org/">http://requirejs.org/</a></li>
+<li>RequireJS 中文网<a target="_blank" rel="noopener" href="http://requirejs.cn/">http://requirejs.cn/</a></li>
+<li>require.js的用法-阮一峰<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog">http://www.ruanyifeng.com/blog</a></li>
+</ul>
+<p>seajs</p>
+<ul>
+<li>seajs文档<a target="_blank" rel="noopener" href="http://seajs.org/docs/">http://seajs.org/docs/</a></li>
+<li>SeaJS从入门到原理<a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/FfEJv2u">http://www.tuicool.com/articles/FfEJv2u</a></li>
+</ul>
+<p>Browserify</p>
+<ul>
+<li>官网<a target="_blank" rel="noopener" href="http://browserify.org/">http://browserify.org/</a></li>
+<li>github<a target="_blank" rel="noopener" href="https://github.com/substack/node-browserify/">https://github.com/substack/node-browserify/</a></li>
+</ul>
+<p>Webpack</p>
+<ul>
+<li>Webpack 中文指南<a target="_blank" rel="noopener" href="http://webpackdoc.com/">http://webpackdoc.com/</a></li>
+<li>webpack的实例<a target="_blank" rel="noopener" href="http://www.vichily.com/">http://www.vichily.com</a></li>
+<li>webpack的入门<a target="_blank" rel="noopener" href="http://www.vichily.com/">http://www.vichily.com</a></li>
+<li>一小时包教会 —— webpack 入门指南<a target="_blank" rel="noopener" href="http://www.w2bc.com/Article/50764">http://www.w2bc.com/Article/50764</a></li>
+</ul>
+<hr>
+<p>CSS预处理器 CSS Preprocessors</p>
+<p>Sass</p>
+<ul>
+<li>sass入门<a target="_blank" rel="noopener" href="http://www.w3cplus.com/sassguide/">http://www.w3cplus.com/sassguide/</a></li>
+<li>sass参考手册<a target="_blank" rel="noopener" href="http://sass.bootcss.com/docs/sass-reference/">http://sass.bootcss.com/docs/sass-reference/</a></li>
+<li>SASS用法指南-阮一峰<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/">http://www.ruanyifeng.com/blog/</a></li>
+</ul>
+<p>Less</p>
+<ul>
+<li>less中文网<a target="_blank" rel="noopener" href="http://lesscss.cn/">http://lesscss.cn/</a></li>
+<li>less快速入门<a target="_blank" rel="noopener" href="http://less.bootcss.com/">http://less.bootcss.com/</a></li>
+</ul>
+<p>stylus</p>
+<ul>
+<li>stylus中文文档-张鑫旭<a target="_blank" rel="noopener" href="http://www.zhangxinxu.com/jq/stylus/">http://www.zhangxinxu.com/jq/stylus/</a></li>
+</ul>
+<hr>
+<p>版本控制 Version Control</p>
+<p>Git</p>
+<ul>
+<li>Git教程-廖雪峰<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/">http://www.liaoxuefeng.com/wiki/</a></li>
+</ul>
+<p>Svn</p>
+<ul>
+<li>史上最简单的SVN使用教程和注意事项<a target="_blank" rel="noopener" href="http://blog.csdn.net/fwzkj/article/details/47988885">http://blog.csdn.net/fwzkj/article/details/47988885</a></li>
+<li>SVN 教程 极客学院<a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/svn/">http://wiki.jikexueyuan.com/project/svn/</a></li>
+<li>SVN 教程 菜鸟教程<a target="_blank" rel="noopener" href="http://www.runoob.com/svn/svn-tuto">http://www.runoob.com/svn/svn-tuto</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat-reward-img.jpg" alt="静听、唯美殇 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay-reward-img.jpg" alt="静听、唯美殇 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/js/" rel="tag"># js</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/10/18/%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E5%BA%93%EF%BC%88javascript%E5%B8%B8%E7%94%A8%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%B0%81%E8%A3%85%EF%BC%89/" rel="prev" title="代码库">
+                  <i class="fa fa-chevron-left"></i> 代码库
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/12/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%EF%BC%8C%E5%BA%94%E5%BD%93%E6%8F%90%E5%89%8D%E6%8E%8C%E6%8F%A1DIV+CSS%E5%B8%83%E5%B1%80%E8%A7%84%E8%8C%83/" rel="next" title="生活">
+                  生活 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">静听、唯美殇</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">257k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:54</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://yzqdev.github.io/2017/10/22/%E7%AC%BC%E7%BB%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"yzqdev/blog-issues","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@2.0.4/dist/canvas-nest.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/live2d-widget","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body>
+</html>
