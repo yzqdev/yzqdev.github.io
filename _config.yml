@@ -1,0 +1,178 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 七月飞雪
+subtitle: YZQ BLOG
+description: for love
+keywords:
+author: 静听、唯美殇
+language:
+  - zh-CN
+  - en
+
+timezone: Asia/Shanghai
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://yzqdev.github.io/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+# abbrlink config
+
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: true
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: "mtime"
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+emoji:
+  enable: true
+  className: github-emoji
+  styles:
+  customEmojis:
+
+#Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true
+
+tag_generator:
+  per_page: 10
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/live2d-widget
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: left
+    width: 200
+    height: 400
+  mobile:
+    show: true
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: xM5VnfCHWJq7YgdoRXE7gGtU-MdYXbMMI #<app_id>
+  app_key: K57tvj5F0xf7ORKWwv4jHgXH
+  username: # Will be asked while deploying if is left blank
+  password: #<<your password>> # Recommmended to be left blank. Will be asked while deploying if is left blank
+aplayer:
+  # script_dir: some/place                        # Public 目录下脚本目录路径，默认: 'assets/js'
+  # style_dir: some/place                         # Public 目录下样式目录路径，默认: 'assets/css'
+  cdn: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js # 引用 APlayer.js 外部 CDN 地址 (默认不开启)
+  style_cdn: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css # 引用 APlayer.css 外部 CDN 地址 (默认不开启)
+  meting: true # MetingJS 支持
+  # meting_api: http://xxx/api.php                # 自定义 Meting API 地址
+  meting_cdn: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js # 引用 Meting.js 外部 CDN 地址 (默认不开启)
+  asset_inject: true # 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启
+  # externalLink: http://xxx/aplayer.min.js       # 老版本参数，功能与参数 cdn 相同
+background_music: //music.163.com/outchain/player?type=2&id=863481092&auto=1&height=66
+sitemap:
+  path: sitemap.xml
+  # template: ./sitemap_template.xml
+server:
+  port: 8002
+  compress: true
+  header: true
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+# livere_uid: MTAyMC8zMjk4NS85NTQ3
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo:
+    github: https://github.com/yzqdev/yzqdev.github.io.git,main

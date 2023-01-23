@@ -1,0 +1,36 @@
+# workflow name
+name: Hexo Blog CI
+
+# master branch on push, auto run
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # check it to your workflow can access it
+      # from: https://github.com/actions/checkout
+      - name: Checkout Repository main branch
+        uses: actions/checkout@v3
+
+      # from: https://github.com/actions/setup-node
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Setup Hexo Dependencies
+        run: |
+          npm install hexo-cli -g
+          npm install
+          npm run g
+      - name: Deploy to pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public
+          single-commit: true
